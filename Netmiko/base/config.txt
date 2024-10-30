@@ -1,0 +1,4 @@
+interface eth0/1
+   description configed by netmiko
+interface eth0/2
+   description configed by netmiko
