@@ -1,0 +1,13 @@
+Value Required Int (GigabitEthernet\S+)
+Value Date (\S+)
+Value List Alarm (.+)
+
+Start
+  ^.*transceiver information: -> Continue.Record
+  ^${Int}\s
+  ^\s+Manufacturing.+:${Date}
+  ^Alarm information: -> SSS
+
+SSS
+  ^\s+${Alarm}
+  ^- -> Start

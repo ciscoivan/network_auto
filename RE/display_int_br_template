@@ -1,0 +1,11 @@
+Value Tru_INT (Eth-Trunk\d+)
+Value PHY (up|down|\*down)
+Value Protocol (up|down)
+Value Int (\S+)
+Value Out (\S+)
+Value List Phy_INT (GigabitEthernet\d+/\d+/\d+)
+
+Start
+  ^Eth-Trunk\d+ -> Continue.Record
+  ^${Tru_INT}\s+${PHY}\s+${Protocol}\s+${Int}\s+${Out}
+  ^\s+${Phy_INT}

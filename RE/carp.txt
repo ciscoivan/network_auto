@@ -1,0 +1,20 @@
+Protocol  Address          Age (min)  Hardware Addr   Type   Interface
+Internet  192.168.100.10          0   0050.56bc.f302  ARPA   Vlan100
+Internet  192.168.100.63          1   a849.4d4e.49a0  ARPA   Vlan100
+Internet  192.168.100.55         18   0022.6d5b.127b  ARPA   Vlan100
+Internet  192.168.26.55           -   54a2.74c7.c1c3  ARPA   Vlan26
+Internet  192.168.10.47           -   54a2.74c7.c1c1  ARPA   Vlan10
+Internet  192.168.10.60          97   001b.a970.2e11  ARPA   Vlan10
+Internet  192.168.10.1            4   e4d3.f134.0321  ARPA   Vlan10
+Internet  192.168.100.111         -   54a2.74c7.c1c6  ARPA   Vlan100
+Internet  192.168.10.10         190   000c.29dd.ed5d  ARPA   Vlan10
+Internet  192.168.100.100         0   000c.29bd.8565  ARPA   Vlan100
+Internet  192.168.100.101        13   0050.56a9.397a  ARPA   Vlan100
+Internet  192.168.26.1          229   e4d3.f134.0321  ARPA   Vlan26
+Internet  192.168.10.25           0   0050.5687.524f  ARPA   Vlan10
+Internet  192.168.100.137         0   0028.f883.29da  ARPA   Vlan100
+Internet  192.168.100.135        42   7085.c288.7847  ARPA   Vlan100
+Internet  192.168.100.146        67   b035.9f82.ac44  ARPA   Vlan100
+Internet  172.20.91.3             -   54a2.74c7.c1c8  ARPA   Vlan206
+Internet  172.20.91.1            51   e4d3.f134.0321  ARPA   Vlan206
+Internet  192.168.100.254        10   e4d3.f134.0321  ARPA   Vlan100

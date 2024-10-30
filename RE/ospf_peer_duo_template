@@ -1,0 +1,15 @@
+Value Filldown Local_Id (\w+)
+Value Filldown Process (\d+)
+Value Area (\S+)
+Value Local_ip (\S+)
+Value Local_int (\S+)
+Value Required Did (\S+)
+Value Dip (\S+)
+
+Start
+  ^<${Local_Id}>
+  ^\s+OSPF\sProcess\s${Process}
+  ^\s+Area\s${Area}\sinterface\s${Local_ip}\(${Local_int}\)
+  ^\s+Router ID: ${Did}\s+Address: ${Dip} -> Record
+
+

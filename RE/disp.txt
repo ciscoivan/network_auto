@@ -1,0 +1,85 @@
+﻿<hualongshipin>dis transceiver ver
+
+GigabitEthernet2/0/24 transceiver information:
+-------------------------------------------------------------
+Common information:
+  Transceiver Type               :UNKNOWN_SFP
+  Connector Type                 :LC
+  Wavelength(nm)                 :850
+  Transfer Distance(m)           :80(50um),30(62.5um),300(OM3)
+  Digital Diagnostic Monitoring  :YES
+  Vendor Name                    :FINISAR CORP.
+  Vendor Part Number             :FTLX8571D3BCL
+  Ordering Name                  :
+-------------------------------------------------------------
+Manufacture information:
+  Manu. Serial Number            :MW3022B
+  Manufacturing Date             :2016-07-30
+  Vendor Name                    :FINISAR CORP.
+-------------------------------------------------------------
+Alarm information:
+  The optical module speed does not match the interface speed
+-------------------------------------------------------------
+Diagnostic information:
+  Temperature(C)                        :30
+  Voltage(V)                            :3.33
+  Bias Current(mA)                      :7.79
+  Bias High Threshold(mA)               :13.20
+  Bias Low  Threshold(mA)               :4.00
+  Current Rx Power(dBM)                 :-3.13
+  Default Rx Power High Warning(dBM)    :-1.00
+  Default Rx Power Low  Warning(dBM)    :-18.01
+  Default Rx Power High Threshold(dBM)  :0.00
+  Default Rx Power Low  Threshold(dBM)  :-20.00
+  Current Tx Power(dBM)                 :-2.64
+  Default Tx Power High Warning(dBM)    :-1.00
+  Default Tx Power Low  Warning(dBM)    :-5.00
+  Default Tx Power High Threshold(dBM)  :-1.00
+  Default Tx Power Low  Threshold(dBM)  :-6.00
+  User Set Rx Power High Threshold(dBM) :0.00
+  User Set Rx Power Low Threshold(dBM)  :-20.00
+  User Set Tx Power High Threshold(dBM) :-1.00
+  User Set Tx Power Low Threshold(dBM)  :-6.00
+  Transceiver phony alarm               :Yes
+-------------------------------------------------------------
+
+GigabitEthernet2/0/26 transceiver information:
+-------------------------------------------------------------
+Common information:
+  Transceiver Type               :1000_BASE_LX_SFP
+  Connector Type                 :LC
+  Wavelength(nm)                 :1310
+  Transfer Distance(m)           :10000(9um)
+  Digital Diagnostic Monitoring  :YES
+  Vendor Name                    :HUAWEI
+  Vendor Part Number             :SFP-1.25G-SM-31
+  Ordering Name                  :
+-------------------------------------------------------------
+Manufacture information:
+  Manu. Serial Number            :A1706260401
+  Manufacturing Date             :2017-06-26
+  Vendor Name                    :HUAWEI
+-------------------------------------------------------------
+Alarm information:
+  RX loss of signal
+-------------------------------------------------------------
+Diagnostic information:
+  Temperature(▒▒C)                      :26
+  Voltage(V)                            :3.29
+  Bias Current(mA)                      :15.91
+  Bias High Threshold(mA)               :54.00
+  Bias Low  Threshold(mA)               :4.20
+  Current Rx Power(dBM)                 :-40.00
+  Default Rx Power High Threshold(dBM)  :-3.00
+  Default Rx Power Low  Threshold(dBM)  :-23.01
+  Current Tx Power(dBM)                 :-4.98
+  Default Tx Power High Threshold(dBM)  :-3.00
+  Default Tx Power Low  Threshold(dBM)  :-9.00
+  User Set Rx Power High Threshold(dBM) :-3.00
+  User Set Rx Power Low Threshold(dBM)  :-23.01
+  User Set Tx Power High Threshold(dBM) :-3.00
+  User Set Tx Power Low Threshold(dBM)  :-9.00
+  Transceiver phony alarm               :Yes
+-------------------------------------------------------------
+
+

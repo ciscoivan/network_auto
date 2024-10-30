@@ -1,0 +1,10 @@
+......
+#
+info-center loghost 192.168.10.1 source-ip 10.10.10.10
+......
+#
+interface LoopBack0
+ description For Router-ID
+ ip address 10.10.10.10 255.255.255.255
+#
+......

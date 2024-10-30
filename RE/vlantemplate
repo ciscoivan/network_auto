@@ -1,0 +1,7 @@
+Value Interface (\S+)
+Value Address (\S+)
+Value Physical (up|down|\*down)
+Value Protocol (up|down|up\(s\))
+
+Start
+  ^${Interface}\s+${Address}\s+${Physical}\s+${Protocol} -> Record

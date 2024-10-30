@@ -1,0 +1,40 @@
+interface GigabitEthernet1/0/1
+ port link-mode bridge
+ description Netmiko1.py
+ port link-type hybrid
+ undo port hybrid vlan 1
+ port hybrid vlan 100 untagged
+ port hybrid pvid vlan 100
+ mac-vlan enable
+ combo enable fiber
+ stp edged-port
+ dot1x
+ mac-authentication
+ mac-authentication guest-vlan 3000
+#
+interface GigabitEthernet1/0/2
+ port link-mode bridge
+ description Nornir2.py
+ port link-type hybrid
+ undo port hybrid vlan 1
+ port hybrid vlan 100 untagged
+ port hybrid pvid vlan 100
+ mac-vlan enable
+ combo enable fiber
+ stp edged-port
+ mac-authentication
+ mac-authentication guest-vlan 3000
+#
+interface GigabitEthernet1/0/3
+ port link-mode bridge
+ port link-type hybrid
+ undo port hybrid vlan 1
+ port hybrid vlan 100 untagged
+ port hybrid pvid vlan 100
+ mac-vlan enable
+ combo enable fiber
+ stp edged-port
+ dot1x
+ mac-authentication
+ mac-authentication guest-vlan 3000
+#

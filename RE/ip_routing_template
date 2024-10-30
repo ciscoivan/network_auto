@@ -1,0 +1,7 @@
+Value Dest (\S+/\S+)
+Value List NextHop (\S+\.\S+\.\S+\.\S+)
+
+Start
+  ^\s+\S+/\S+\s+ -> Continue.Record
+  ^\s+${Dest}\s+.+\s+${NextHop}\s+
+  ^\s+.+\s+${NextHop}\s+ -> Record

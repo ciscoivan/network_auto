@@ -1,0 +1,51 @@
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(E): E-Trunk down
+(b): BFD down
+(B): Bit-error-detection down
+(e): ETHOAM down
+(d): Dampening Suppressed
+(p): port alarm down
+(ld): loop-detect trigger down
+(mf): mac-flapping blocked
+InUti/OutUti: input utility/output utility
+Interface                   PHY   Protocol  InUti OutUti   inErrors  outErrors
+Eth-Trunk3                  up    down      0.34%  0.49%          0          0
+  GigabitEthernet8/1/2(10G) up    up        0.27%  0.48%          0          0
+  GigabitEthernet10/0/4(10G) up    up        0.41%  0.49%          0          0
+Eth-Trunk4                  up    down      2.14% 29.39%          0          0
+  GigabitEthernet8/1/0(10G) up    up        2.33% 29.44%          0          0
+  GigabitEthernet10/0/3(10G) up    up        1.96% 29.33%          0          0
+Eth-Trunk5                  up    down      0.13%  0.30%          0          0
+  GigabitEthernet6/0/3(10G) up    up        0.24%  0.33%          0          0
+  GigabitEthernet8/1/6(10G) up    up        0.03%  0.26%          0          0
+Eth-Trunk6                  up    down      0.01%  0.01%          0          0
+  GigabitEthernet2/1/10     up    up        0.01%  0.01%          0          0
+Eth-Trunk8                  *down  down         0%     0%          0          0
+Eth-Trunk11                 up    down      3.02%  0.72%          0          0
+  GigabitEthernet2/1/20     up    up        4.14%  0.93%          0          0
+  GigabitEthernet2/1/21     up    up        3.40%  1.30%          0          0
+  GigabitEthernet2/1/22     up    up        1.33%  0.40%          0          0
+  GigabitEthernet2/1/23     up    up        3.23%  0.24%          0          0
+Eth-Trunk13                 up    up       37.57%  2.37%          0          0
+  GigabitEthernet2/0/1(10G) up    up       37.55%  2.61%          0          0
+  GigabitEthernet6/0/0(10G) up    up       37.58%  2.12%          0          0
+Eth-Trunk14                 up    up       14.40%  1.56%       1940          0
+  GigabitEthernet2/0/0(10G) up    up       14.46%  1.83%         83          0
+  GigabitEthernet6/1/0(10G) up    up       14.34%  1.29%       1857          0
+Eth-Trunk17                 up    down      0.04%  6.51%          0          0
+  GigabitEthernet4/1/15     up    up        0.04%  6.51%          0          0
+Eth-Trunk18                 up    down      0.01%  5.16%          0          0
+  GigabitEthernet4/0/6      up    up        0.01%  2.88%          0          0
+  GigabitEthernet4/1/14     up    up        0.01%  7.44%          0          0
+Eth-Trunk20                 up    up        0.20%  0.23%          4          0
+  GigabitEthernet8/1/9(10G) up    up        0.20%  0.23%          4          0
+Eth-Trunk22                 up    down      0.79%  0.01%          0          0
+  GigabitEthernet10/0/5(10G) up    up        1.58%  0.01%          0          0
+  GigabitEthernet10/1/0(10G) up    up        0.01%  0.01%          0          0
+Eth-Trunk23                 up    up        0.21%  1.63%          0          0
+  GigabitEthernet6/0/1(10G) up    up        0.43%  1.67%          0          0
+  GigabitEthernet10/0/1(10G) up    up        0.01%  1.59%          0          0

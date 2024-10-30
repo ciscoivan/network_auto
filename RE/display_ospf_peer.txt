@@ -1,0 +1,35 @@
+<R7>display ospf peer
+
+	 OSPF Process 1 with Router ID 7.7.7.7
+		 Neighbors
+
+ Area 0.0.0.1 interface 47.1.1.7(Ethernet0/0/0)'s neighbors
+ Router ID: 4.4.4.4          Address: 47.1.1.4
+   State: Full  Mode:Nbr is  Slave  Priority: 1
+   DR: 47.1.1.7  BDR: 47.1.1.4  MTU: 0
+   Dead timer due in 30  sec
+   Retrans timer interval: 5
+   Neighbor is up for 00:00:51
+   Authentication Sequence: [ 0 ]
+
+		 Neighbors
+
+ Area 0.0.0.1 interface 37.1.1.7(Ethernet0/0/1)'s neighbors
+ Router ID: 3.3.3.3          Address: 37.1.1.3
+   State: Full  Mode:Nbr is  Slave  Priority: 1
+   DR: 37.1.1.7  BDR: 37.1.1.3  MTU: 0
+   Dead timer due in 33  sec
+   Retrans timer interval: 5
+   Neighbor is up for 00:00:32
+   Authentication Sequence: [ 0 ]
+
+		 Neighbors
+
+ Area 0.0.0.1 interface 27.1.1.7(GigabitEthernet0/0/0)'s neighbors
+ Router ID: 2.2.2.2      Address: 27.1.1.2
+   State: Full  Mode:Nbr is  Master  Priority: 1
+   DR: 27.1.1.2  BDR: 27.1.1.7  MTU: 0
+   Dead timer due in 31  sec
+   Retrans timer interval: 5
+   Neighbor is up for 00:00:50
+   Authentication Sequence: [ 0 ]
