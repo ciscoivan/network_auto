@@ -1,0 +1,15 @@
+#
+system
+#
+sysname {{name}}
+#
+interface LoopBack0
+ description Management loopback
+ ip address {{id}} 255.255.255.255
+#
+interface Vlanif1
+ ip address {{ip}} 255.255.255.0
+#
+interface GigabitEthernet0/0/1
+ description LAN to {{to_name}}-{{to_int}}
+#

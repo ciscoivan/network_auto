@@ -1,0 +1,7 @@
+{% for port in ports -%}
+{% with port=port -%}   #说明：with在这里其实是重新命令变量而已。
+{% include "port_sub.conf.j2" %}
+{% endwith -%}
+{% endfor -%}
+
+

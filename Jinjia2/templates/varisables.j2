@@ -1,0 +1,12 @@
+system
+
+sysname {{ name }}
+
+interface Loopback0
+ ip address {{ id }} 255.255.255.255
+
+vlan {{ vlans[0] }}
+
+ospf 1 router-id {{ id }}
+ area {{ ospf['area'] }}
+ network {{ ospf.network }}
