@@ -5,14 +5,14 @@ import os
 
 pp = pprint.PrettyPrinter(indent=2)
 
-host = "192.168.0.20"
+host = "172.16.1.1"
 
 # drive是一个类class
 drive = get_network_driver('ios')
 # 类实例化
 conn = drive(hostname= host,
-             username= 'cisco',
-             password= 'cisco',
+             username= 'noc',
+             password= '123.Com',
              optional_args= {'port': 22})
 # 建立连接会话
 conn.open()
