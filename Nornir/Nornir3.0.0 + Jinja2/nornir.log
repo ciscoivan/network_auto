@@ -1,0 +1,107 @@
+2022-05-17 20:04:09,493 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2022-05-17 20:04:14,721 - nornir.core.task -    ERROR -      start() - Host 'ro1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\paramiko\client.py", line 412, in connect
+    server_key = t.get_remote_server_key()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\paramiko\transport.py", line 834, in get_remote_server_key
+    raise SSHException("No existing session")
+paramiko.ssh_exception.SSHException: No existing session
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_netmiko\tasks\netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\cisco\cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 350, in __init__
+    self._open()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 980, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: Paramiko: 'No existing session' error: try increasing 'conn_timeout' to 10 seconds or larger.
+
+2022-05-17 20:04:14,722 - nornir.core.task -    ERROR -      start() - Host 'ro1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir3.0.0 + Jinja2/nornir配合jinja2.py", line 15, in load_data
+    task.run(task=netmiko_send_config, config_commands=rendering.result.split('\n'))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2022-05-17 20:04:31,667 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2022-05-17 20:41:32,939 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2022-05-17 21:31:04,530 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2022-05-17 21:31:04,622 - nornir.core.task -    ERROR -      start() - Host 'ro1': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_jinja2\plugins\tasks\template_file.py", line 43, in template_file
+    text = t.render(host=task.host, **kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "BGP.j2", line 1, in top-level template code
+    {% for i in host.loopbacks %}
+jinja2.exceptions.UndefinedError: 'nornir.core.inventory.Host object' has no attribute 'loopbacks'
+
+2022-05-17 21:31:04,622 - nornir.core.task -    ERROR -      start() - Host 'ro2': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_jinja2\plugins\tasks\template_file.py", line 43, in template_file
+    text = t.render(host=task.host, **kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "BGP.j2", line 1, in top-level template code
+    {% for i in host.loopbacks %}
+jinja2.exceptions.UndefinedError: 'nornir.core.inventory.Host object' has no attribute 'loopbacks'
+
+2022-05-17 21:31:04,623 - nornir.core.task -    ERROR -      start() - Host 'ro1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir3.0.0 + Jinja2/nornir配合jinja2.py", line 14, in load_data
+    rendering = task.run(task=template_file, template="BGP.j2", path="") #因为BGP.j2和我们的nornir8.py处于同一个文件夹下，因此这里的path参数设为空(path="")，
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2022-05-17 21:31:04,637 - nornir.core.task -    ERROR -      start() - Host 'ro2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir3.0.0 + Jinja2/nornir配合jinja2.py", line 14, in load_data
+    rendering = task.run(task=template_file, template="BGP.j2", path="") #因为BGP.j2和我们的nornir8.py处于同一个文件夹下，因此这里的path参数设为空(path="")，
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2022-05-17 21:34:20,667 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2022-05-17 21:50:13,006 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2022-05-17 21:53:35,948 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
