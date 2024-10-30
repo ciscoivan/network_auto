@@ -1,0 +1,19 @@
+- id: 192.168.1.1
+  name: Layer3Switch-1
+  vlans:
+    - 10
+    - 20
+    - 30
+  ospf:
+    network: 10.0.1.0 0.0.0.255
+    area: 0
+
+- id: 192.168.2.2
+  name: Layer3Switch-2
+  vlans:
+    - 40
+    - 50
+    - 60
+  ospf:
+    network: 10.0.1.0 0.0.0.255
+    area: 0

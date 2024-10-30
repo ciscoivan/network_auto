@@ -1,0 +1,12 @@
+access:
+- port link-type access
+- port default vlan 110
+- port discard tagged-packet
+- port link-flap protection enable
+
+trunk:
+- port priority 5
+- port link-type trunk
+- port trunk allow-pass vlan 100
+- port link-flap interval 50
+- port type uni

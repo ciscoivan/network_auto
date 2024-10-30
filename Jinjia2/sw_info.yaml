@@ -1,0 +1,17 @@
+- name: Layer3Switch-1
+  id: 192.168.1.1
+  ip: 192.168.11.11
+  to_name: SW
+  to_int: GigabitEthernet0/0/1
+
+- name: Layer3Switch-2
+  id: 192.168.2.2
+  ip: 192.168.11.12
+  to_name: SW
+  to_int: GigabitEthernet0/0/2
+
+- name: Layer3Switch-4
+  id: 192.168.4.4
+  ip: 192.168.11.14
+  to_name: SW
+  to_int: GigabitEthernet0/0/4

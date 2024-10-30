@@ -1,0 +1,4 @@
+- port link-type access
+- port default vlan 110
+- port discard tagged-packet
+- port link-flap protection enable
