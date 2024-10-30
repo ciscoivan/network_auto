@@ -1,0 +1,2 @@
+D:\code\netmiko\templates\sw1.txt
+D:\code\netmiko\templates\sw2.txt
