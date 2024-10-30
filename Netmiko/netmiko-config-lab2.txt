@@ -1,0 +1,2 @@
+interface GigabitEthernet 0/0/1
+description by send_config_from_file

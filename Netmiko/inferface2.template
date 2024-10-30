@@ -1,0 +1,9 @@
+Value Interface (\S+\/\d\/\d+)
+Value Link (up|down)
+Value INUti (\S+)
+Value OUTuti (\S+)
+
+
+
+Start
+  ^${Interface}\s+${Link}\s+(down|up)\s+${INUti}\s+${OUTuti} -> Record

@@ -1,0 +1,6 @@
+Value CPU_5s (\d+%)
+Value CPU_1m (\d+%)
+Value CPU_5m (\d+%)
+
+Start
+  ^CPU\s+utilization\s+for\s+five\s+seconds:\s+${CPU_5s}:\s+one\s+minute:\s+${CPU_1m}:\s+five\s+minutes:\s+${CPU_5m}. -> Record
