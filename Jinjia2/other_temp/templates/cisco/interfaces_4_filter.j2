@@ -1,0 +1,7 @@
+{% for interface in interfaces %}
+interface {{ interface.name | interface_name_format }}
+        description {{ interface.desc }}
+{%- if interface.shutdown %}
+no shutdown
+{%- endif %}
+{% endfor %}
