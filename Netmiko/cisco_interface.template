@@ -1,0 +1,6 @@
+Value INTERFACE (\S+)
+Value IPADDRESS (\S+)
+Value STATUS (\S+)
+
+Start
+ ^${INTERFACE}\s+${IPADDRESS}\s+.*\s${STATUS} -> Record

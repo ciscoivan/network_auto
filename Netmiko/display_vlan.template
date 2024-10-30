@@ -1,0 +1,9 @@
+Value VLAN_ID (\d+)
+Value Staus (\w+)
+Value Property (\w+)
+Value MACLRN (\w+)
+Value Statistics (\w+)
+Value Description (\w+)
+
+Start
+  ^${VLAN_ID}\s+${Staus}\s+${Property}\s+${MACLRN}\s+${Statistics}\s+${Description}\s+  -> Record
