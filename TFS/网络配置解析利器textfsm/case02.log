@@ -1,0 +1,38 @@
+Routing Engine status:
+  Slot 0:
+    Current state                  Master
+    Election priority              Master (default)
+    Temperature                 39 degrees C / 102 degrees F
+    CPU temperature             55 degrees C / 131 degrees F
+    DRAM                      2048 MB
+    Memory utilization          76 percent
+    CPU utilization:
+      User                      95 percent
+      Background                 0 percent
+      Kernel                     4 percent
+      Interrupt                  1 percent
+      Idle                       0 percent
+    Model                          RE-4.0
+    Serial ID                      xxxxxxxxxxxx
+    Start time                     2008-04-10 20:32:25 PDT
+    Uptime                         180 days, 22 hours, 45 minutes, 20 seconds
+    Load averages:                 1 minute   5 minute  15 minute
+                                       0.96       1.03       1.03
+Routing Engine status:
+  Slot 1:
+    Current state                  Backup
+    Election priority              Backup
+    Temperature                 30 degrees C / 86 degrees F
+    CPU temperature             31 degrees C / 87 degrees F
+    DRAM                      2048 MB
+    Memory utilization          14 percent
+    CPU utilization:
+      User                       0 percent
+      Background                 0 percent
+      Kernel                     0 percent
+      Interrupt                  1 percent
+      Idle                      99 percent
+    Model                          RE-4.0
+    Serial ID                      xxxxxxxxxxxx
+    Start time                     2008-01-22 07:32:10 PST
+    Uptime                         260 days, 10 hours, 45 minutes, 39 seconds

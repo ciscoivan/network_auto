@@ -1,0 +1,30 @@
+!
+interface GigabitEthernet1/0/1
+ switchport access vlan 111
+ switchport mode access
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/2
+ switchport mode trunk
+ spanning-tree portfast trunk
+!
+interface GigabitEthernet1/0/3
+!
+interface GigabitEthernet1/0/4
+ switchport access vlan 111
+ switchport mode access
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/5
+ switchport mode trunk
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/6
+ switchport access vlan 111
+ switchport mode access
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/7
+ switchport mode trunk
+ spanning-tree portfast
+!

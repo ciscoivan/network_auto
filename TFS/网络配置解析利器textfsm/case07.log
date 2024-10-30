@@ -1,0 +1,170 @@
+VSI Name: 50002
+  VSI Index               : 6
+  VSI Description         : XXXXXX
+  VSI State               : Up
+  MTU                     : 1500
+  Bandwidth               : Unlimited
+  Broadcast Restrain      : Unlimited
+  Multicast Restrain      : Unlimited
+  Unknown Unicast Restrain: Unlimited
+  MAC Learning            : Enabled
+  MAC Table Limit         : -
+  MAC Learning rate       : -
+  Drop Unknown            : -
+  Flooding                : Enabled
+  Statistics              : Disabled
+  VXLAN ID                : 50002
+  Tunnels:
+    Tunnel Name          Link ID    State    Type        Flood proxy
+    Tunnel11             0x500000a  UP       Manual      Disabled
+    Tunnel12             0x500000a  UP       Manual      Disabled
+  ACs:
+    AC                               Link ID  State       Type    
+    BAGG44 srv8001                   0        Up          Manual  
+    BAGG45 srv8001                   1        Up          Manual  
+
+VSI Name: 41013
+  VSI Index               : 0
+  VSI Description         : 10.101.13.0/24
+  VSI State               : Up
+  MTU                     : 1500
+  Bandwidth               : Unlimited
+  Broadcast Restrain      : Unlimited
+  Multicast Restrain      : Unlimited
+  Unknown Unicast Restrain: Unlimited
+  MAC Learning            : Enabled
+  MAC Table Limit         : -
+  MAC Learning rate       : -
+  Drop Unknown            : -
+  Flooding                : Enabled
+  Statistics              : Disabled
+  Gateway Interface       : VSI-interface 41013
+  VXLAN ID                : 41013
+  Tunnels:
+    Tunnel Name          Link ID    State    Type        Flood proxy
+    Tunnel10             0x500000a  UP       Manual      Disabled
+  ACs:
+    AC                               Link ID  State       Type    
+    BAGG1 srv13                      0        Up          Manual  
+    BAGG2 srv13                      1        Up          Manual  
+    BAGG3 srv13                      2        Up          Manual  
+    BAGG4 srv13                      3        Up          Manual  
+    BAGG5 srv13                      4        Up          Manual  
+    BAGG6 srv13                      5        Up          Manual  
+    BAGG7 srv13                      6        Up          Manual  
+    BAGG8 srv13                      7        Up          Manual  
+
+VSI Name: 41014
+  VSI Index               : 2
+  VSI Description         : 10.101.14.0/24
+  VSI State               : Up
+  MTU                     : 1500
+  Bandwidth               : Unlimited
+  Broadcast Restrain      : Unlimited
+  Multicast Restrain      : Unlimited
+  Unknown Unicast Restrain: Unlimited
+  MAC Learning            : Enabled
+  MAC Table Limit         : -
+  MAC Learning rate       : -
+  Drop Unknown            : -
+  Flooding                : Enabled
+  Statistics              : Disabled
+  Gateway Interface       : VSI-interface 41014
+  VXLAN ID                : 41014
+  Tunnels:
+    Tunnel Name          Link ID    State    Type        Flood proxy
+    Tunnel10             0x500000a  UP       Manual      Disabled
+  ACs:
+    AC                               Link ID  State       Type    
+    BAGG3 srv14                      0        Up          Manual  
+    BAGG4 srv14                      1        Up          Manual  
+    BAGG5 srv14                      2        Up          Manual  
+
+VSI Name: 41015
+  VSI Index               : 5
+  VSI Description         : 10.101.15.0/24
+  VSI State               : Up
+  MTU                     : 1500
+  Bandwidth               : Unlimited
+  Broadcast Restrain      : Unlimited
+  Multicast Restrain      : Unlimited
+  Unknown Unicast Restrain: Unlimited
+  MAC Learning            : Enabled
+  MAC Table Limit         : -
+  MAC Learning rate       : -
+  Drop Unknown            : -
+  Flooding                : Enabled
+  Statistics              : Disabled
+  Gateway Interface       : VSI-interface 41015
+  VXLAN ID                : 41015
+  Tunnels:
+    Tunnel Name          Link ID    State    Type        Flood proxy
+    Tunnel10             0x500000a  UP       Manual      Disabled
+
+VSI Name: 41017
+  VSI Index               : 3
+  VSI Description         : 10.101.17.0/24
+  VSI State               : Up
+  MTU                     : 1500
+  Bandwidth               : Unlimited
+  Broadcast Restrain      : Unlimited
+  Multicast Restrain      : Unlimited
+  Unknown Unicast Restrain: Unlimited
+  MAC Learning            : Enabled
+  MAC Table Limit         : -
+  MAC Learning rate       : -
+  Drop Unknown            : -
+  Flooding                : Enabled
+  Statistics              : Disabled
+  Gateway Interface       : VSI-interface 41017
+  VXLAN ID                : 41017
+  Tunnels:
+    Tunnel Name          Link ID    State    Type        Flood proxy
+    Tunnel10             0x500000a  UP       Manual      Disabled
+  ACs:
+    AC                               Link ID  State       Type    
+    BAGG1 srv17                      0        Up          Manual  
+    BAGG2 srv17                      1        Up          Manual  
+
+VSI Name: 41018
+  VSI Index               : 4
+  VSI Description         : 10.101.18.0/24
+  VSI State               : Up
+  MTU                     : 1500
+  Bandwidth               : Unlimited
+  Broadcast Restrain      : Unlimited
+  Multicast Restrain      : Unlimited
+  Unknown Unicast Restrain: Unlimited
+  MAC Learning            : Enabled
+  MAC Table Limit         : -
+  MAC Learning rate       : -
+  Drop Unknown            : -
+  Flooding                : Enabled
+  Statistics              : Disabled
+  Gateway Interface       : VSI-interface 41018
+  VXLAN ID                : 41018
+  Tunnels:
+    Tunnel Name          Link ID    State    Type        Flood proxy
+    Tunnel10             0x500000a  UP       Manual      Disabled
+  ACs:
+    AC                               Link ID  State       Type    
+    BAGG6 srv18                      0        Up          Manual  
+    BAGG7 srv18                      1        Up          Manual  
+    BAGG8 srv18                      2        Up          Manual  
+
+VSI Name: Auto_L3VNI1004_1004
+  VSI Index               : 1
+  VSI State               : Down
+  MTU                     : 1500
+  Bandwidth               : Unlimited
+  Broadcast Restrain      : Unlimited
+  Multicast Restrain      : Unlimited
+  Unknown Unicast Restrain: Unlimited
+  MAC Learning            : Enabled
+  MAC Table Limit         : -
+  MAC Learning rate       : -
+  Drop Unknown            : -
+  Flooding                : Enabled
+  Statistics              : Disabled
+  Gateway Interface       : VSI-interface 1004
+  VXLAN ID                : 1004
