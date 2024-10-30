@@ -1,0 +1,1523 @@
+2022-05-15 19:06:47,782 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts', 'interfaces']} on 2 hosts
+2022-05-15 19:08:10,908 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts', 'interfaces']} on 2 hosts
+2022-05-15 19:18:56,393 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts', 'interfaces']} on 2 hosts
+2022-05-15 20:29:55,793 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show version'} on 2 hosts
+2022-05-15 20:30:00,977 - nornir.core.task -    ERROR -      start() - Host 'ro2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\paramiko\client.py", line 412, in connect
+    server_key = t.get_remote_server_key()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\paramiko\transport.py", line 834, in get_remote_server_key
+    raise SSHException("No existing session")
+paramiko.ssh_exception.SSHException: No existing session
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_netmiko\tasks\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\cisco\cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 350, in __init__
+    self._open()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 980, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: Paramiko: 'No existing session' error: try increasing 'conn_timeout' to 10 seconds or larger.
+
+2022-05-15 20:30:28,101 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show clock'} on 2 hosts
+2022-05-15 20:31:08,776 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br'} on 2 hosts
+2022-05-15 20:31:42,483 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show version'} on 2 hosts
+2022-05-15 20:33:09,778 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show version'} on 3 hosts
+2022-05-15 20:52:05,570 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_strning': 'show ip int br'} on 2 hosts
+2022-05-15 20:52:05,571 - nornir.core.task -    ERROR -      start() - Host 'ro1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: netmiko_send_command() missing 1 required positional argument: 'command_string'
+
+2022-05-15 20:52:05,571 - nornir.core.task -    ERROR -      start() - Host 'ro2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: netmiko_send_command() missing 1 required positional argument: 'command_string'
+
+2022-05-15 20:52:15,271 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_strning': 'show ip int br'} on 2 hosts
+2022-05-15 20:52:15,271 - nornir.core.task -    ERROR -      start() - Host 'ro1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: netmiko_send_command() missing 1 required positional argument: 'command_string'
+
+2022-05-15 20:52:15,271 - nornir.core.task -    ERROR -      start() - Host 'ro2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: netmiko_send_command() missing 1 required positional argument: 'command_string'
+
+2022-05-15 20:52:43,989 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh ip int brief'} on 2 hosts
+2022-05-15 20:52:49,109 - nornir.core.task -    ERROR -      start() - Host 'ro1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\paramiko\client.py", line 412, in connect
+    server_key = t.get_remote_server_key()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\paramiko\transport.py", line 834, in get_remote_server_key
+    raise SSHException("No existing session")
+paramiko.ssh_exception.SSHException: No existing session
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_netmiko\tasks\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\cisco\cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 350, in __init__
+    self._open()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 980, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: Paramiko: 'No existing session' error: try increasing 'conn_timeout' to 10 seconds or larger.
+
+2022-05-15 20:52:59,655 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh ip int brief'} on 2 hosts
+2022-05-15 20:53:34,825 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh ip int brief'} on 2 hosts
+2022-05-15 20:53:38,624 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh ip int brief'} on 4 hosts
+2022-05-15 20:55:15,591 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh ip int brief'} on 2 hosts
+2022-05-15 20:55:18,760 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh ip int brief'} on 4 hosts
+2022-05-15 20:57:21,112 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh ip int brief'} on 2 hosts
+2022-05-15 20:59:05,272 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh ip int brief'} on 4 hosts
+2022-05-15 21:00:34,304 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh ip int brief'} on 2 hosts
+2022-05-15 21:00:39,440 - nornir.core.task -    ERROR -      start() - Host 'ro1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\paramiko\client.py", line 412, in connect
+    server_key = t.get_remote_server_key()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\paramiko\transport.py", line 834, in get_remote_server_key
+    raise SSHException("No existing session")
+paramiko.ssh_exception.SSHException: No existing session
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_netmiko\tasks\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\cisco\cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 350, in __init__
+    self._open()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 980, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: Paramiko: 'No existing session' error: try increasing 'conn_timeout' to 10 seconds or larger.
+
+2022-05-15 21:00:53,869 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh ip int brief'} on 2 hosts
+2022-05-15 22:10:34,006 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh ip arp '} on 2 hosts
+2022-05-16 19:24:41,507 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh ip arp '} on 2 hosts
+2022-05-16 19:39:19,887 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh ip arp '} on 2 hosts
+2022-05-16 19:48:50,163 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip arp'} on 1 hosts
+2022-05-16 19:49:03,110 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip arp'} on 1 hosts
+2022-05-16 20:06:53,507 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip arp'} on 3 hosts
+2022-05-16 20:33:30,089 -  nornir.core -     INFO -        run() - Running task 'config' with args {} on 4 hosts
+2022-05-16 20:33:30,129 - nornir.core.task -    ERROR -      start() - Host 'ro2': task 'config' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir推送配置.py", line 8, in config
+    cisco.run(task=netmiko_send_config(),config_file='sendconfig/commands.cfg')
+TypeError: netmiko_send_config() missing 1 required positional argument: 'task'
+
+2022-05-16 20:33:30,146 - nornir.core.task -    ERROR -      start() - Host 'ro1': task 'config' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir推送配置.py", line 8, in config
+    cisco.run(task=netmiko_send_config(),config_file='sendconfig/commands.cfg')
+TypeError: netmiko_send_config() missing 1 required positional argument: 'task'
+
+2022-05-16 20:33:30,146 - nornir.core.task -    ERROR -      start() - Host 'ro3': task 'config' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir推送配置.py", line 8, in config
+    cisco.run(task=netmiko_send_config(),config_file='sendconfig/commands.cfg')
+TypeError: netmiko_send_config() missing 1 required positional argument: 'task'
+
+2022-05-16 20:33:30,147 - nornir.core.task -    ERROR -      start() - Host 'ro4': task 'config' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir推送配置.py", line 8, in config
+    cisco.run(task=netmiko_send_config(),config_file='sendconfig/commands.cfg')
+TypeError: netmiko_send_config() missing 1 required positional argument: 'task'
+
+2022-05-16 20:33:59,104 -  nornir.core -     INFO -        run() - Running task 'config' with args {} on 4 hosts
+2022-05-16 20:33:59,106 - nornir.core.task -    ERROR -      start() - Host 'ro1': task 'config' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir推送配置.py", line 8, in config
+    cisco.run(task=netmiko_send_config(),config_file='sendconfig/commands.cfg')
+TypeError: netmiko_send_config() missing 1 required positional argument: 'task'
+
+2022-05-16 20:33:59,106 - nornir.core.task -    ERROR -      start() - Host 'ro4': task 'config' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir推送配置.py", line 8, in config
+    cisco.run(task=netmiko_send_config(),config_file='sendconfig/commands.cfg')
+TypeError: netmiko_send_config() missing 1 required positional argument: 'task'
+
+2022-05-16 20:33:59,106 - nornir.core.task -    ERROR -      start() - Host 'ro3': task 'config' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir推送配置.py", line 8, in config
+    cisco.run(task=netmiko_send_config(),config_file='sendconfig/commands.cfg')
+TypeError: netmiko_send_config() missing 1 required positional argument: 'task'
+
+2022-05-16 20:33:59,106 - nornir.core.task -    ERROR -      start() - Host 'ro2': task 'config' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir推送配置.py", line 8, in config
+    cisco.run(task=netmiko_send_config(),config_file='sendconfig/commands.cfg')
+TypeError: netmiko_send_config() missing 1 required positional argument: 'task'
+
+2022-05-16 20:34:46,528 -  nornir.core -     INFO -        run() - Running task 'config' with args {} on 4 hosts
+2022-05-16 20:35:25,139 -  nornir.core -     INFO -        run() - Running task 'config' with args {} on 4 hosts
+2022-05-16 20:35:49,324 - nornir.core.task -    ERROR -      start() - Host 'ro4': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\paramiko\channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\paramiko\buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 573, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\paramiko\channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_netmiko\tasks\netmiko_send_config.py", line 29, in netmiko_send_config
+    result = net_connect.send_config_from_file(config_file=config_file, **kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 1809, in send_config_from_file
+    return self.send_config_set(cfg_file, **kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 1912, in send_config_set
+    new_output = self.read_until_pattern(pattern=re.escape(cmd.strip()))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 655, in read_until_pattern
+    return self._read_channel_expect(*args, **kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 583, in _read_channel_expect
+    raise NetmikoTimeoutException(
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, data not available.
+
+2022-05-16 20:35:49,325 - nornir.core.task -    ERROR -      start() - Host 'ro1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\paramiko\channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\paramiko\buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 573, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\paramiko\channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_netmiko\tasks\netmiko_send_config.py", line 29, in netmiko_send_config
+    result = net_connect.send_config_from_file(config_file=config_file, **kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 1809, in send_config_from_file
+    return self.send_config_set(cfg_file, **kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 1912, in send_config_set
+    new_output = self.read_until_pattern(pattern=re.escape(cmd.strip()))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 655, in read_until_pattern
+    return self._read_channel_expect(*args, **kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 583, in _read_channel_expect
+    raise NetmikoTimeoutException(
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, data not available.
+
+2022-05-16 20:35:49,326 - nornir.core.task -    ERROR -      start() - Host 'ro4': task 'config' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir推送配置.py", line 9, in config
+    cisco.run(task=netmiko_send_config, config_file='sendconfig/commands.cfg')
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2022-05-16 20:35:49,326 - nornir.core.task -    ERROR -      start() - Host 'ro1': task 'config' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir推送配置.py", line 9, in config
+    cisco.run(task=netmiko_send_config, config_file='sendconfig/commands.cfg')
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2022-05-16 20:35:49,516 - nornir.core.task -    ERROR -      start() - Host 'ro3': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\paramiko\channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\paramiko\buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 573, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\paramiko\channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_netmiko\tasks\netmiko_send_config.py", line 29, in netmiko_send_config
+    result = net_connect.send_config_from_file(config_file=config_file, **kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 1809, in send_config_from_file
+    return self.send_config_set(cfg_file, **kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 1912, in send_config_set
+    new_output = self.read_until_pattern(pattern=re.escape(cmd.strip()))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 655, in read_until_pattern
+    return self._read_channel_expect(*args, **kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 583, in _read_channel_expect
+    raise NetmikoTimeoutException(
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, data not available.
+
+2022-05-16 20:35:49,517 - nornir.core.task -    ERROR -      start() - Host 'ro3': task 'config' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir推送配置.py", line 9, in config
+    cisco.run(task=netmiko_send_config, config_file='sendconfig/commands.cfg')
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2022-05-16 20:35:49,594 - nornir.core.task -    ERROR -      start() - Host 'ro2': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\paramiko\channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\paramiko\buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 573, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\paramiko\channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_netmiko\tasks\netmiko_send_config.py", line 29, in netmiko_send_config
+    result = net_connect.send_config_from_file(config_file=config_file, **kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 1809, in send_config_from_file
+    return self.send_config_set(cfg_file, **kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 1912, in send_config_set
+    new_output = self.read_until_pattern(pattern=re.escape(cmd.strip()))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 655, in read_until_pattern
+    return self._read_channel_expect(*args, **kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 583, in _read_channel_expect
+    raise NetmikoTimeoutException(
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, data not available.
+
+2022-05-16 20:35:49,594 - nornir.core.task -    ERROR -      start() - Host 'ro2': task 'config' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir推送配置.py", line 9, in config
+    cisco.run(task=netmiko_send_config, config_file='sendconfig/commands.cfg')
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2022-05-16 20:36:17,864 -  nornir.core -     INFO -        run() - Running task 'config' with args {} on 4 hosts
+2022-05-16 20:37:48,396 -  nornir.core -     INFO -        run() - Running task 'config' with args {} on 4 hosts
+2022-05-16 20:37:48,397 - nornir.core.task -    ERROR -      start() - Host 'ro1': task 'config' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: config() takes 0 positional arguments but 1 was given
+
+2022-05-16 20:37:48,398 - nornir.core.task -    ERROR -      start() - Host 'ro2': task 'config' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: config() takes 0 positional arguments but 1 was given
+
+2022-05-16 20:37:48,398 - nornir.core.task -    ERROR -      start() - Host 'ro3': task 'config' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: config() takes 0 positional arguments but 1 was given
+
+2022-05-16 20:37:48,398 - nornir.core.task -    ERROR -      start() - Host 'ro4': task 'config' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: config() takes 0 positional arguments but 1 was given
+
+2022-05-16 20:38:09,150 -  nornir.core -     INFO -        run() - Running task 'config' with args {} on 4 hosts
+2022-05-16 20:38:09,151 - nornir.core.task -    ERROR -      start() - Host 'ro1': task 'config' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: config() takes 0 positional arguments but 1 was given
+
+2022-05-16 20:38:09,152 - nornir.core.task -    ERROR -      start() - Host 'ro4': task 'config' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: config() takes 0 positional arguments but 1 was given
+
+2022-05-16 20:38:09,152 - nornir.core.task -    ERROR -      start() - Host 'ro2': task 'config' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: config() takes 0 positional arguments but 1 was given
+
+2022-05-16 20:38:09,153 - nornir.core.task -    ERROR -      start() - Host 'ro3': task 'config' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: config() takes 0 positional arguments but 1 was given
+
+2022-05-16 20:38:40,037 -  nornir.core -     INFO -        run() - Running task 'config' with args {} on 4 hosts
+2022-05-16 20:47:42,215 -  nornir.core -     INFO -        run() - Running task '正在备份交换机配置' with args {} on 4 hosts
+2022-05-16 20:47:49,944 - nornir.core.task -    ERROR -      start() - Host 'ro1': task '正在备份交换机配置' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir保存设备配置.py", line 13, in backup_config
+    task.run(task=write_file,content=r.result["config"]["runing"],fulename=str(task.host.name)+"-"+str(date.today())+".txt")
+KeyError: 'runing'
+
+2022-05-16 20:47:50,331 - nornir.core.task -    ERROR -      start() - Host 'ro2': task '正在备份交换机配置' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir保存设备配置.py", line 13, in backup_config
+    task.run(task=write_file,content=r.result["config"]["runing"],fulename=str(task.host.name)+"-"+str(date.today())+".txt")
+KeyError: 'runing'
+
+2022-05-16 20:47:52,141 - nornir.core.task -    ERROR -      start() - Host 'ro4': task '正在备份交换机配置' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir保存设备配置.py", line 13, in backup_config
+    task.run(task=write_file,content=r.result["config"]["runing"],fulename=str(task.host.name)+"-"+str(date.today())+".txt")
+KeyError: 'runing'
+
+2022-05-16 20:47:52,622 - nornir.core.task -    ERROR -      start() - Host 'ro3': task '正在备份交换机配置' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir保存设备配置.py", line 13, in backup_config
+    task.run(task=write_file,content=r.result["config"]["runing"],fulename=str(task.host.name)+"-"+str(date.today())+".txt")
+KeyError: 'runing'
+
+2022-05-16 20:54:12,466 -  nornir.core -     INFO -        run() - Running task '正在备份交换机配置' with args {} on 4 hosts
+2022-05-16 20:54:17,668 - nornir.core.task -    ERROR -      start() - Host 'ro4': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\paramiko\client.py", line 412, in connect
+    server_key = t.get_remote_server_key()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\paramiko\transport.py", line 834, in get_remote_server_key
+    raise SSHException("No existing session")
+paramiko.ssh_exception.SSHException: No existing session
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\napalm\base\base.py", line 86, in _netmiko_open
+    self._netmiko_device = ConnectHandler(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\cisco\cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 350, in __init__
+    self._open()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 980, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.ssh_exception.NetmikoTimeoutException: Paramiko: 'No existing session' error: try increasing 'conn_timeout' to 10 seconds or larger.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_napalm\plugins\tasks\napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_napalm\plugins\connections\__init__.py", line 57, in open
+    connection.open()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\napalm\ios\ios.py", line 169, in open
+    self.device = self._netmiko_open(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\napalm\base\base.py", line 95, in _netmiko_open
+    raise ConnectionException("Cannot connect to {}".format(self.hostname))
+napalm.base.exceptions.ConnectionException: Cannot connect to 192.168.200.4
+
+2022-05-16 20:54:17,669 - nornir.core.task -    ERROR -      start() - Host 'ro4': task '正在备份交换机配置' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir保存设备配置.py", line 11, in backup_config
+    r = task.run(task=napalm_get, getters=["config"])
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_get (failed)
+
+
+2022-05-16 20:54:36,619 -  nornir.core -     INFO -        run() - Running task '正在备份交换机配置' with args {} on 4 hosts
+2022-05-16 21:36:43,812 -  nornir.core -     INFO -        run() - Running task '接口配置采集中' with args {} on 4 hosts
+2022-05-16 21:40:24,988 -  nornir.core -     INFO -        run() - Running task '接口配置采集中' with args {} on 4 hosts
+2022-05-16 21:41:27,584 -  nornir.core -     INFO -        run() - Running task '接口配置采集中' with args {} on 4 hosts
+2022-05-18 20:44:54,930 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh interfaces brief'} on 4 hosts
+2022-05-18 20:45:15,457 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip interfaces brief'} on 4 hosts
+2022-05-18 20:46:01,895 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br'} on 4 hosts
+2022-05-18 20:46:51,351 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br', 'use_textfsm': True} on 4 hosts
+2022-05-18 20:48:02,999 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br', 'use_textfsm': True} on 4 hosts
+2022-05-18 20:49:10,278 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br', 'use_textfsm': True} on 4 hosts
+2022-05-18 20:49:50,675 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br', 'use_textfsm': True} on 4 hosts
+2022-05-18 20:50:12,094 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br', 'use_textfsm': True} on 4 hosts
+2022-05-18 20:52:08,801 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show  int br', 'use_textfsm': True} on 4 hosts
+2022-05-18 20:53:05,780 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show  int summary', 'use_textfsm': True} on 4 hosts
+2022-05-18 21:05:53,045 -  nornir.core -     INFO -        run() - Running task '正在备份交换机配置' with args {} on 4 hosts
+2022-05-18 21:10:44,537 -  nornir.core -     INFO -        run() - Running task '正在备份交换机配置' with args {} on 4 hosts
+2022-05-18 21:11:01,722 -  nornir.core -     INFO -        run() - Running task '正在备份交换机配置' with args {} on 4 hosts
+2022-05-18 21:12:17,160 -  nornir.core -     INFO -        run() - Running task '正在备份交换机配置' with args {} on 4 hosts
+2022-05-18 21:12:45,046 -  nornir.core -     INFO -        run() - Running task '正在备份交换机配置' with args {} on 4 hosts
+2022-05-18 21:14:45,949 -  nornir.core -     INFO -        run() - Running task '正在备份交换机配置' with args {} on 4 hosts
+2022-05-18 21:15:11,683 -  nornir.core -     INFO -        run() - Running task '正在备份交换机配置' with args {} on 4 hosts
+2022-05-18 21:15:43,398 -  nornir.core -     INFO -        run() - Running task '正在备份交换机配置' with args {} on 4 hosts
+2022-05-18 21:16:02,753 -  nornir.core -     INFO -        run() - Running task '正在备份交换机配置' with args {} on 4 hosts
+2022-05-18 21:18:23,604 -  nornir.core -     INFO -        run() - Running task '4台路由器正在备份配置' with args {} on 4 hosts
+2022-05-18 21:19:00,049 -  nornir.core -     INFO -        run() - Running task '4台路由器正在备份配置' with args {} on 4 hosts
+2022-05-18 21:19:17,545 -  nornir.core -     INFO -        run() - Running task '4台路由器正在备份配置' with args {} on 4 hosts
+2022-05-18 21:31:27,456 -  nornir.core -     INFO -        run() - Running task '4台路由器正在备份配置' with args {} on 4 hosts
+2022-05-18 21:31:33,473 - nornir.core.task -    ERROR -      start() - Host 'ro2': task 'write_file' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_utils\plugins\tasks\files\write_file.py", line 55, in write_file
+    with open(filename, mode=mode) as f:
+OSError: [Errno 22] Invalid argument: 'ro2-2022-05-18 21:31:33.422283.txt'
+
+2022-05-18 21:31:33,474 - nornir.core.task -    ERROR -      start() - Host 'ro2': task '4台路由器正在备份配置' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir保存设备配置.py", line 18, in backup_config
+    task.run(task=write_file, content=r.result["config"]["running"], filename=str(task.host.name) + "-" + str(datetime.datetime.now()) + ".txt")
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: write_file (failed)
+
+
+2022-05-18 21:31:33,640 - nornir.core.task -    ERROR -      start() - Host 'ro3': task 'write_file' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_utils\plugins\tasks\files\write_file.py", line 55, in write_file
+    with open(filename, mode=mode) as f:
+OSError: [Errno 22] Invalid argument: 'ro3-2022-05-18 21:31:33.639305.txt'
+
+2022-05-18 21:31:33,640 - nornir.core.task -    ERROR -      start() - Host 'ro3': task '4台路由器正在备份配置' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir保存设备配置.py", line 18, in backup_config
+    task.run(task=write_file, content=r.result["config"]["running"], filename=str(task.host.name) + "-" + str(datetime.datetime.now()) + ".txt")
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: write_file (failed)
+
+
+2022-05-18 21:31:34,413 - nornir.core.task -    ERROR -      start() - Host 'ro4': task 'write_file' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_utils\plugins\tasks\files\write_file.py", line 55, in write_file
+    with open(filename, mode=mode) as f:
+OSError: [Errno 22] Invalid argument: 'ro4-2022-05-18 21:31:34.413202.txt'
+
+2022-05-18 21:31:34,414 - nornir.core.task -    ERROR -      start() - Host 'ro4': task '4台路由器正在备份配置' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir保存设备配置.py", line 18, in backup_config
+    task.run(task=write_file, content=r.result["config"]["running"], filename=str(task.host.name) + "-" + str(datetime.datetime.now()) + ".txt")
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: write_file (failed)
+
+
+2022-05-18 21:31:34,570 - nornir.core.task -    ERROR -      start() - Host 'ro1': task 'write_file' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_utils\plugins\tasks\files\write_file.py", line 55, in write_file
+    with open(filename, mode=mode) as f:
+OSError: [Errno 22] Invalid argument: 'ro1-2022-05-18 21:31:34.570081.txt'
+
+2022-05-18 21:31:34,571 - nornir.core.task -    ERROR -      start() - Host 'ro1': task '4台路由器正在备份配置' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir保存设备配置.py", line 18, in backup_config
+    task.run(task=write_file, content=r.result["config"]["running"], filename=str(task.host.name) + "-" + str(datetime.datetime.now()) + ".txt")
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: write_file (failed)
+
+
+2022-05-18 21:31:44,739 -  nornir.core -     INFO -        run() - Running task '4台路由器正在备份配置' with args {} on 4 hosts
+2022-05-18 21:31:50,042 - nornir.core.task -    ERROR -      start() - Host 'ro3': task 'write_file' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_utils\plugins\tasks\files\write_file.py", line 55, in write_file
+    with open(filename, mode=mode) as f:
+OSError: [Errno 22] Invalid argument: 'ro3-2022-05-18 21:31:50.042801.txt'
+
+2022-05-18 21:31:50,043 - nornir.core.task -    ERROR -      start() - Host 'ro3': task '4台路由器正在备份配置' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir保存设备配置.py", line 18, in backup_config
+    task.run(task=write_file, content=r.result["config"]["running"], filename=str(task.host.name) + "-" + str(datetime.datetime.now()) + ".txt")
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: write_file (failed)
+
+
+2022-05-18 21:31:51,427 - nornir.core.task -    ERROR -      start() - Host 'ro4': task 'write_file' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_utils\plugins\tasks\files\write_file.py", line 55, in write_file
+    with open(filename, mode=mode) as f:
+OSError: [Errno 22] Invalid argument: 'ro4-2022-05-18 21:31:51.426437.txt'
+
+2022-05-18 21:31:51,427 - nornir.core.task -    ERROR -      start() - Host 'ro4': task '4台路由器正在备份配置' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir保存设备配置.py", line 18, in backup_config
+    task.run(task=write_file, content=r.result["config"]["running"], filename=str(task.host.name) + "-" + str(datetime.datetime.now()) + ".txt")
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: write_file (failed)
+
+
+2022-05-18 21:31:51,457 - nornir.core.task -    ERROR -      start() - Host 'ro2': task 'write_file' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_utils\plugins\tasks\files\write_file.py", line 55, in write_file
+    with open(filename, mode=mode) as f:
+OSError: [Errno 22] Invalid argument: 'ro2-2022-05-18 21:31:51.456921.txt'
+
+2022-05-18 21:31:51,457 - nornir.core.task -    ERROR -      start() - Host 'ro2': task '4台路由器正在备份配置' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir保存设备配置.py", line 18, in backup_config
+    task.run(task=write_file, content=r.result["config"]["running"], filename=str(task.host.name) + "-" + str(datetime.datetime.now()) + ".txt")
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: write_file (failed)
+
+
+2022-05-18 21:31:51,706 - nornir.core.task -    ERROR -      start() - Host 'ro1': task 'write_file' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_utils\plugins\tasks\files\write_file.py", line 55, in write_file
+    with open(filename, mode=mode) as f:
+OSError: [Errno 22] Invalid argument: 'ro1-2022-05-18 21:31:51.705232.txt'
+
+2022-05-18 21:31:51,707 - nornir.core.task -    ERROR -      start() - Host 'ro1': task '4台路由器正在备份配置' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir保存设备配置.py", line 18, in backup_config
+    task.run(task=write_file, content=r.result["config"]["running"], filename=str(task.host.name) + "-" + str(datetime.datetime.now()) + ".txt")
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: write_file (failed)
+
+
+2022-05-18 21:32:40,318 -  nornir.core -     INFO -        run() - Running task '4台路由器正在备份配置' with args {} on 4 hosts
+2022-05-18 21:32:46,367 - nornir.core.task -    ERROR -      start() - Host 'ro2': task 'write_file' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_utils\plugins\tasks\files\write_file.py", line 55, in write_file
+    with open(filename, mode=mode) as f:
+OSError: [Errno 22] Invalid argument: 'ro2-2022-05-18 21:32:46.366550.txt'
+
+2022-05-18 21:32:46,368 - nornir.core.task -    ERROR -      start() - Host 'ro2': task '4台路由器正在备份配置' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir保存设备配置.py", line 18, in backup_config
+    task.run(task=write_file, content=r.result["config"]["running"], filename=str(task.host.name) + "-" +str(datetime.datetime.now()) + ".txt")
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: write_file (failed)
+
+
+2022-05-18 21:32:46,900 - nornir.core.task -    ERROR -      start() - Host 'ro3': task 'write_file' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_utils\plugins\tasks\files\write_file.py", line 55, in write_file
+    with open(filename, mode=mode) as f:
+OSError: [Errno 22] Invalid argument: 'ro3-2022-05-18 21:32:46.899745.txt'
+
+2022-05-18 21:32:46,901 - nornir.core.task -    ERROR -      start() - Host 'ro3': task '4台路由器正在备份配置' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir保存设备配置.py", line 18, in backup_config
+    task.run(task=write_file, content=r.result["config"]["running"], filename=str(task.host.name) + "-" +str(datetime.datetime.now()) + ".txt")
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: write_file (failed)
+
+
+2022-05-18 21:32:46,931 - nornir.core.task -    ERROR -      start() - Host 'ro4': task 'write_file' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_utils\plugins\tasks\files\write_file.py", line 55, in write_file
+    with open(filename, mode=mode) as f:
+OSError: [Errno 22] Invalid argument: 'ro4-2022-05-18 21:32:46.930249.txt'
+
+2022-05-18 21:32:46,931 - nornir.core.task -    ERROR -      start() - Host 'ro4': task '4台路由器正在备份配置' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir保存设备配置.py", line 18, in backup_config
+    task.run(task=write_file, content=r.result["config"]["running"], filename=str(task.host.name) + "-" +str(datetime.datetime.now()) + ".txt")
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: write_file (failed)
+
+
+2022-05-18 21:32:47,071 - nornir.core.task -    ERROR -      start() - Host 'ro1': task 'write_file' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_utils\plugins\tasks\files\write_file.py", line 55, in write_file
+    with open(filename, mode=mode) as f:
+OSError: [Errno 22] Invalid argument: 'ro1-2022-05-18 21:32:47.070740.txt'
+
+2022-05-18 21:32:47,072 - nornir.core.task -    ERROR -      start() - Host 'ro1': task '4台路由器正在备份配置' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir保存设备配置.py", line 18, in backup_config
+    task.run(task=write_file, content=r.result["config"]["running"], filename=str(task.host.name) + "-" +str(datetime.datetime.now()) + ".txt")
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: write_file (failed)
+
+
+2022-05-18 21:35:50,629 -  nornir.core -     INFO -        run() - Running task '4台路由器正在备份配置' with args {} on 4 hosts
+2022-05-18 21:35:56,979 - nornir.core.task -    ERROR -      start() - Host 'ro2': task 'write_file' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_utils\plugins\tasks\files\write_file.py", line 55, in write_file
+    with open(filename, mode=mode) as f:
+OSError: [Errno 22] Invalid argument: 'ro2-2022-05-18 21:35:56.977421.txt'
+
+2022-05-18 21:35:56,979 - nornir.core.task -    ERROR -      start() - Host 'ro2': task '4台路由器正在备份配置' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir保存设备配置.py", line 18, in backup_config
+    task.run(task=write_file, content=r.result["config"]["running"], filename=str(task.host.name) + "-" +str(datetime.datetime.now()) + ".txt")
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: write_file (failed)
+
+
+2022-05-18 21:35:57,104 - nornir.core.task -    ERROR -      start() - Host 'ro1': task 'write_file' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_utils\plugins\tasks\files\write_file.py", line 55, in write_file
+    with open(filename, mode=mode) as f:
+OSError: [Errno 22] Invalid argument: 'ro1-2022-05-18 21:35:57.103106.txt'
+
+2022-05-18 21:35:57,105 - nornir.core.task -    ERROR -      start() - Host 'ro1': task '4台路由器正在备份配置' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir保存设备配置.py", line 18, in backup_config
+    task.run(task=write_file, content=r.result["config"]["running"], filename=str(task.host.name) + "-" +str(datetime.datetime.now()) + ".txt")
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: write_file (failed)
+
+
+2022-05-18 21:35:57,540 - nornir.core.task -    ERROR -      start() - Host 'ro4': task 'write_file' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_utils\plugins\tasks\files\write_file.py", line 55, in write_file
+    with open(filename, mode=mode) as f:
+OSError: [Errno 22] Invalid argument: 'ro4-2022-05-18 21:35:57.539606.txt'
+
+2022-05-18 21:35:57,540 - nornir.core.task -    ERROR -      start() - Host 'ro4': task '4台路由器正在备份配置' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir保存设备配置.py", line 18, in backup_config
+    task.run(task=write_file, content=r.result["config"]["running"], filename=str(task.host.name) + "-" +str(datetime.datetime.now()) + ".txt")
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: write_file (failed)
+
+
+2022-05-18 21:35:57,723 - nornir.core.task -    ERROR -      start() - Host 'ro3': task 'write_file' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_utils\plugins\tasks\files\write_file.py", line 55, in write_file
+    with open(filename, mode=mode) as f:
+OSError: [Errno 22] Invalid argument: 'ro3-2022-05-18 21:35:57.722929.txt'
+
+2022-05-18 21:35:57,723 - nornir.core.task -    ERROR -      start() - Host 'ro3': task '4台路由器正在备份配置' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir保存设备配置.py", line 18, in backup_config
+    task.run(task=write_file, content=r.result["config"]["running"], filename=str(task.host.name) + "-" +str(datetime.datetime.now()) + ".txt")
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: write_file (failed)
+
+
+2022-05-18 21:36:15,644 -  nornir.core -     INFO -        run() - Running task '4台路由器正在备份配置' with args {} on 4 hosts
+2022-05-18 21:36:21,863 - nornir.core.task -    ERROR -      start() - Host 'ro4': task 'write_file' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_utils\plugins\tasks\files\write_file.py", line 55, in write_file
+    with open(filename, mode=mode) as f:
+OSError: [Errno 22] Invalid argument: 'ro4-2022-05-18 21:36:21.862751.txt'
+
+2022-05-18 21:36:21,864 - nornir.core.task -    ERROR -      start() - Host 'ro4': task '4台路由器正在备份配置' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir保存设备配置.py", line 18, in backup_config
+    task.run(task=write_file, content=r.result["config"]["running"], filename=str(task.host.name) + "-" +str(datetime.datetime.now()) + ".txt")
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: write_file (failed)
+
+
+2022-05-18 21:36:22,236 - nornir.core.task -    ERROR -      start() - Host 'ro3': task 'write_file' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_utils\plugins\tasks\files\write_file.py", line 55, in write_file
+    with open(filename, mode=mode) as f:
+OSError: [Errno 22] Invalid argument: 'ro3-2022-05-18 21:36:22.235289.txt'
+
+2022-05-18 21:36:22,236 - nornir.core.task -    ERROR -      start() - Host 'ro3': task '4台路由器正在备份配置' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir保存设备配置.py", line 18, in backup_config
+    task.run(task=write_file, content=r.result["config"]["running"], filename=str(task.host.name) + "-" +str(datetime.datetime.now()) + ".txt")
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: write_file (failed)
+
+
+2022-05-18 21:36:22,375 - nornir.core.task -    ERROR -      start() - Host 'ro2': task 'write_file' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_utils\plugins\tasks\files\write_file.py", line 55, in write_file
+    with open(filename, mode=mode) as f:
+OSError: [Errno 22] Invalid argument: 'ro2-2022-05-18 21:36:22.375142.txt'
+
+2022-05-18 21:36:22,376 - nornir.core.task -    ERROR -      start() - Host 'ro2': task '4台路由器正在备份配置' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir保存设备配置.py", line 18, in backup_config
+    task.run(task=write_file, content=r.result["config"]["running"], filename=str(task.host.name) + "-" +str(datetime.datetime.now()) + ".txt")
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: write_file (failed)
+
+
+2022-05-18 21:36:22,563 - nornir.core.task -    ERROR -      start() - Host 'ro1': task 'write_file' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_utils\plugins\tasks\files\write_file.py", line 55, in write_file
+    with open(filename, mode=mode) as f:
+OSError: [Errno 22] Invalid argument: 'ro1-2022-05-18 21:36:22.563853.txt'
+
+2022-05-18 21:36:22,564 - nornir.core.task -    ERROR -      start() - Host 'ro1': task '4台路由器正在备份配置' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir保存设备配置.py", line 18, in backup_config
+    task.run(task=write_file, content=r.result["config"]["running"], filename=str(task.host.name) + "-" +str(datetime.datetime.now()) + ".txt")
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: write_file (failed)
+
+
+2022-05-18 21:36:37,984 -  nornir.core -     INFO -        run() - Running task '4台路由器正在备份配置' with args {} on 4 hosts
+2022-05-18 21:36:44,579 - nornir.core.task -    ERROR -      start() - Host 'ro3': task 'write_file' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_utils\plugins\tasks\files\write_file.py", line 55, in write_file
+    with open(filename, mode=mode) as f:
+OSError: [Errno 22] Invalid argument: 'ro3-2022-05-18 21:36:44.577352.txt'
+
+2022-05-18 21:36:44,579 - nornir.core.task -    ERROR -      start() - Host 'ro3': task '4台路由器正在备份配置' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir保存设备配置.py", line 18, in backup_config
+    task.run(task=write_file, content=r.result["config"]["running"], filename=str(task.host.name) + "-" +str(datetime.datetime.today()) + ".txt")
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: write_file (failed)
+
+
+2022-05-18 21:36:44,656 - nornir.core.task -    ERROR -      start() - Host 'ro1': task 'write_file' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_utils\plugins\tasks\files\write_file.py", line 55, in write_file
+    with open(filename, mode=mode) as f:
+OSError: [Errno 22] Invalid argument: 'ro1-2022-05-18 21:36:44.656271.txt'
+
+2022-05-18 21:36:44,657 - nornir.core.task -    ERROR -      start() - Host 'ro1': task '4台路由器正在备份配置' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir保存设备配置.py", line 18, in backup_config
+    task.run(task=write_file, content=r.result["config"]["running"], filename=str(task.host.name) + "-" +str(datetime.datetime.today()) + ".txt")
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: write_file (failed)
+
+
+2022-05-18 21:36:44,704 - nornir.core.task -    ERROR -      start() - Host 'ro2': task 'write_file' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_utils\plugins\tasks\files\write_file.py", line 55, in write_file
+    with open(filename, mode=mode) as f:
+OSError: [Errno 22] Invalid argument: 'ro2-2022-05-18 21:36:44.703770.txt'
+
+2022-05-18 21:36:44,704 - nornir.core.task -    ERROR -      start() - Host 'ro2': task '4台路由器正在备份配置' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir保存设备配置.py", line 18, in backup_config
+    task.run(task=write_file, content=r.result["config"]["running"], filename=str(task.host.name) + "-" +str(datetime.datetime.today()) + ".txt")
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: write_file (failed)
+
+
+2022-05-18 21:36:44,952 - nornir.core.task -    ERROR -      start() - Host 'ro4': task 'write_file' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_utils\plugins\tasks\files\write_file.py", line 55, in write_file
+    with open(filename, mode=mode) as f:
+OSError: [Errno 22] Invalid argument: 'ro4-2022-05-18 21:36:44.951025.txt'
+
+2022-05-18 21:36:44,952 - nornir.core.task -    ERROR -      start() - Host 'ro4': task '4台路由器正在备份配置' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir保存设备配置.py", line 18, in backup_config
+    task.run(task=write_file, content=r.result["config"]["running"], filename=str(task.host.name) + "-" +str(datetime.datetime.today()) + ".txt")
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: write_file (failed)
+
+
+2022-05-18 21:37:10,225 -  nornir.core -     INFO -        run() - Running task '4台路由器正在备份配置' with args {} on 4 hosts
+2022-05-18 21:38:21,654 -  nornir.core -     INFO -        run() - Running task '4台路由器正在备份配置' with args {} on 4 hosts
+2022-05-18 21:38:28,144 - nornir.core.task -    ERROR -      start() - Host 'ro2': task 'write_file' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_utils\plugins\tasks\files\write_file.py", line 55, in write_file
+    with open(filename, mode=mode) as f:
+OSError: [Errno 22] Invalid argument: 'ro2-2022-05-18 21:38:28.143895.txt'
+
+2022-05-18 21:38:28,144 - nornir.core.task -    ERROR -      start() - Host 'ro2': task '4台路由器正在备份配置' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir保存设备配置.py", line 18, in backup_config
+    task.run(task=write_file, content=r.result["config"]["running"], filename=str(task.host.name) + "-" +str(datetime.now()) + ".txt")
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: write_file (failed)
+
+
+2022-05-18 21:38:28,610 - nornir.core.task -    ERROR -      start() - Host 'ro4': task 'write_file' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_utils\plugins\tasks\files\write_file.py", line 55, in write_file
+    with open(filename, mode=mode) as f:
+OSError: [Errno 22] Invalid argument: 'ro4-2022-05-18 21:38:28.609353.txt'
+
+2022-05-18 21:38:28,610 - nornir.core.task -    ERROR -      start() - Host 'ro4': task '4台路由器正在备份配置' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir保存设备配置.py", line 18, in backup_config
+    task.run(task=write_file, content=r.result["config"]["running"], filename=str(task.host.name) + "-" +str(datetime.now()) + ".txt")
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: write_file (failed)
+
+
+2022-05-18 21:38:28,750 - nornir.core.task -    ERROR -      start() - Host 'ro1': task 'write_file' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_utils\plugins\tasks\files\write_file.py", line 55, in write_file
+    with open(filename, mode=mode) as f:
+OSError: [Errno 22] Invalid argument: 'ro1-2022-05-18 21:38:28.749396.txt'
+
+2022-05-18 21:38:28,750 - nornir.core.task -    ERROR -      start() - Host 'ro1': task '4台路由器正在备份配置' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir保存设备配置.py", line 18, in backup_config
+    task.run(task=write_file, content=r.result["config"]["running"], filename=str(task.host.name) + "-" +str(datetime.now()) + ".txt")
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: write_file (failed)
+
+
+2022-05-18 21:38:28,889 - nornir.core.task -    ERROR -      start() - Host 'ro3': task 'write_file' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_utils\plugins\tasks\files\write_file.py", line 55, in write_file
+    with open(filename, mode=mode) as f:
+OSError: [Errno 22] Invalid argument: 'ro3-2022-05-18 21:38:28.889756.txt'
+
+2022-05-18 21:38:28,890 - nornir.core.task -    ERROR -      start() - Host 'ro3': task '4台路由器正在备份配置' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:/code/env398/nornir/Nornir保存设备配置.py", line 18, in backup_config
+    task.run(task=write_file, content=r.result["config"]["running"], filename=str(task.host.name) + "-" +str(datetime.now()) + ".txt")
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: write_file (failed)
+
+
+2022-05-18 21:44:48,616 -  nornir.core -     INFO -        run() - Running task '4台路由器正在备份配置' with args {} on 4 hosts
+2022-05-19 20:32:30,743 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh interface switchport', 'use_textfsm': True} on 4 hosts
+2022-05-19 20:32:32,785 - nornir.core.task -    ERROR -      start() - Host 'ro2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_netmiko\tasks\netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\utilities.py", line 500, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 1550, in send_command
+    structured_output = get_structured_data(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\utilities.py", line 347, in get_structured_data
+    return _textfsm_parse(textfsm_obj, raw_output, attrs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\utilities.py", line 319, in _textfsm_parse
+    textfsm_obj.ParseCmd(raw_output, attrs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\_textfsm\_clitable.py", line 272, in ParseCmd
+    self.table = self._ParseCmdItem(self.raw, template_file=template_files[0])
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\_textfsm\_clitable.py", line 303, in _ParseCmdItem
+    for record in fsm.ParseText(cmd_input):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\textfsm\parser.py", line 895, in ParseText
+    self._CheckLine(line)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\textfsm\parser.py", line 944, in _CheckLine
+    if self._Operations(rule, line):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\textfsm\parser.py", line 1024, in _Operations
+    raise TextFSMError('State Error raised. Rule Line: %s. Input Line: %s'
+textfsm.parser.TextFSMError: State Error raised. Rule Line: 40. Input Line: % Invalid input detected at '^' marker.
+
+2022-05-19 20:32:32,786 - nornir.core.task -    ERROR -      start() - Host 'ro3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_netmiko\tasks\netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\utilities.py", line 500, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 1550, in send_command
+    structured_output = get_structured_data(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\utilities.py", line 347, in get_structured_data
+    return _textfsm_parse(textfsm_obj, raw_output, attrs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\utilities.py", line 319, in _textfsm_parse
+    textfsm_obj.ParseCmd(raw_output, attrs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\_textfsm\_clitable.py", line 272, in ParseCmd
+    self.table = self._ParseCmdItem(self.raw, template_file=template_files[0])
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\_textfsm\_clitable.py", line 303, in _ParseCmdItem
+    for record in fsm.ParseText(cmd_input):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\textfsm\parser.py", line 895, in ParseText
+    self._CheckLine(line)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\textfsm\parser.py", line 944, in _CheckLine
+    if self._Operations(rule, line):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\textfsm\parser.py", line 1024, in _Operations
+    raise TextFSMError('State Error raised. Rule Line: %s. Input Line: %s'
+textfsm.parser.TextFSMError: State Error raised. Rule Line: 40. Input Line: % Invalid input detected at '^' marker.
+
+2022-05-19 20:32:32,883 - nornir.core.task -    ERROR -      start() - Host 'ro4': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_netmiko\tasks\netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\utilities.py", line 500, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 1550, in send_command
+    structured_output = get_structured_data(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\utilities.py", line 347, in get_structured_data
+    return _textfsm_parse(textfsm_obj, raw_output, attrs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\utilities.py", line 319, in _textfsm_parse
+    textfsm_obj.ParseCmd(raw_output, attrs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\_textfsm\_clitable.py", line 272, in ParseCmd
+    self.table = self._ParseCmdItem(self.raw, template_file=template_files[0])
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\_textfsm\_clitable.py", line 303, in _ParseCmdItem
+    for record in fsm.ParseText(cmd_input):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\textfsm\parser.py", line 895, in ParseText
+    self._CheckLine(line)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\textfsm\parser.py", line 944, in _CheckLine
+    if self._Operations(rule, line):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\textfsm\parser.py", line 1024, in _Operations
+    raise TextFSMError('State Error raised. Rule Line: %s. Input Line: %s'
+textfsm.parser.TextFSMError: State Error raised. Rule Line: 40. Input Line: % Invalid input detected at '^' marker.
+
+2022-05-19 20:32:32,928 - nornir.core.task -    ERROR -      start() - Host 'ro1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\nornir_netmiko\tasks\netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\utilities.py", line 500, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\base_connection.py", line 1550, in send_command
+    structured_output = get_structured_data(
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\utilities.py", line 347, in get_structured_data
+    return _textfsm_parse(textfsm_obj, raw_output, attrs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\utilities.py", line 319, in _textfsm_parse
+    textfsm_obj.ParseCmd(raw_output, attrs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\_textfsm\_clitable.py", line 272, in ParseCmd
+    self.table = self._ParseCmdItem(self.raw, template_file=template_files[0])
+  File "D:\ProgramData\Anaconda3\lib\site-packages\netmiko\_textfsm\_clitable.py", line 303, in _ParseCmdItem
+    for record in fsm.ParseText(cmd_input):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\textfsm\parser.py", line 895, in ParseText
+    self._CheckLine(line)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\textfsm\parser.py", line 944, in _CheckLine
+    if self._Operations(rule, line):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\textfsm\parser.py", line 1024, in _Operations
+    raise TextFSMError('State Error raised. Rule Line: %s. Input Line: %s'
+textfsm.parser.TextFSMError: State Error raised. Rule Line: 40. Input Line: % Invalid input detected at '^' marker.
+
+2022-05-19 20:32:50,000 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br', 'use_textfsm': True} on 4 hosts
+2022-05-19 20:33:47,443 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br', 'use_textfsm': True} on 4 hosts
+2022-05-19 20:39:08,263 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br', 'use_textfsm': True} on 4 hosts
+2022-05-19 20:49:35,346 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br', 'use_textfsm': True} on 4 hosts
+2022-05-20 20:25:59,395 -  nornir.core -     INFO -        run() - Running task 'host_parm' with args {} on 4 hosts
+2022-05-24 23:04:36,165 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh interface switchport', 'use_textfsm': True} on 2 hosts
+2022-05-24 23:05:21,492 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh interface switchport', 'use_textfsm': True} on 2 hosts
+2022-05-24 23:07:48,466 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh interface switchport', 'use_textfsm': True} on 2 hosts
+2022-05-24 23:08:12,486 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh interface switchport', 'use_textfsm': True} on 2 hosts
+2022-05-24 23:08:14,994 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['interface Gi0/1', 'description Trunk Port (Nornir)']} on 6 hosts
+2022-05-24 23:08:17,822 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['interface Gi0/2', 'description Access Port to VLAN 999 (Nornir)']} on 6 hosts
+2022-05-24 23:08:19,644 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['interface Gi0/1', 'description Trunk Port (Nornir)']} on 6 hosts
+2022-05-24 23:08:21,184 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['interface Gi0/2', 'description Access Port to VLAN 999 (Nornir)']} on 6 hosts
+2022-05-24 23:08:22,956 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh interface description'} on 6 hosts
+2022-05-24 23:08:26,573 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh interface switchport', 'use_textfsm': True} on 2 hosts
+2022-05-24 23:08:29,005 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['interface Gi0/1', 'description Trunk Port (Nornir)']} on 6 hosts
+2022-05-24 23:08:31,633 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['interface Gi0/2', 'description Access Port to VLAN 999 (Nornir)']} on 6 hosts
+2022-05-24 23:08:33,399 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['interface Gi0/1', 'description Trunk Port (Nornir)']} on 6 hosts
+2022-05-24 23:08:35,070 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['interface Gi0/2', 'description Access Port to VLAN 999 (Nornir)']} on 6 hosts
+2022-05-24 23:08:37,329 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh interface description'} on 6 hosts
+2022-05-24 23:14:08,222 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh interface switchport', 'use_textfsm': True} on 2 hosts
+2022-05-24 23:14:10,479 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['interface Gi0/1', 'description Trunk Port (Nornir)']} on 6 hosts
+2022-05-24 23:14:13,020 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['interface Gi0/2', 'description Access Port to VLAN 999 (Nornir)']} on 6 hosts
+2022-05-24 23:14:14,666 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['interface Gi0/1', 'description Trunk Port (Nornir)']} on 6 hosts
+2022-05-24 23:14:16,120 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['interface Gi0/2', 'description Access Port to VLAN 999 (Nornir)']} on 6 hosts
+2022-05-24 23:14:17,957 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh interface description'} on 6 hosts
+2022-05-24 23:16:00,896 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh interface switchport', 'use_textfsm': True} on 2 hosts
+2022-05-24 23:16:03,443 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['interface Gi0/1', 'description Trunk Port (Nornir)']} on 2 hosts
+2022-05-24 23:16:04,338 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['interface Gi0/2', 'description Access Port to VLAN 999 (Nornir)']} on 2 hosts
+2022-05-24 23:16:05,422 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['interface Gi0/1', 'description Trunk Port (Nornir)']} on 2 hosts
+2022-05-24 23:16:06,421 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['interface Gi0/2', 'description Access Port to VLAN 999 (Nornir)']} on 2 hosts
+2022-05-24 23:16:07,559 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh interface description'} on 2 hosts
+2022-05-24 23:18:25,495 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh interface switchport', 'use_textfsm': True} on 2 hosts
+2022-05-24 23:18:28,008 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh interface switchport', 'use_textfsm': True} on 2 hosts
+2022-05-24 23:20:10,926 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh interface switchport', 'use_textfsm': True} on 2 hosts
+2022-05-24 23:20:41,500 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh interface switchport', 'use_textfsm': True} on 2 hosts
+2022-05-24 23:21:10,412 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh interface switchport', 'use_textfsm': True} on 2 hosts
+2022-05-24 23:21:53,714 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh interface switchport', 'use_textfsm': True} on 2 hosts
+2022-05-24 23:21:56,249 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['interface Gi0/1', 'description Trunk Port (Nornir)']} on 2 hosts
+2022-05-24 23:21:57,266 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['interface Gi0/2', 'description Access Port to VLAN 999 (Nornir)']} on 2 hosts
+2022-05-24 23:21:58,346 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['interface Gi0/3', 'description Access Port to VLAN 1 (Nornir)']} on 2 hosts
+2022-05-24 23:21:59,385 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['interface Gi0/1', 'description Trunk Port (Nornir)']} on 2 hosts
+2022-05-24 23:22:00,429 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['interface Gi0/2', 'description Access Port to VLAN 999 (Nornir)']} on 2 hosts
+2022-05-24 23:22:01,506 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['interface Gi0/3', 'description Access Port to VLAN 1 (Nornir)']} on 2 hosts
+2022-05-24 23:22:02,715 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh interface description'} on 2 hosts
+2022-05-26 20:42:32,520 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh interface switchport', 'use_textfsm': True} on 2 hosts
+2022-05-26 20:42:34,909 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['interface Gi0/1', 'description Trunk Port (Nornir)']} on 2 hosts
+2022-05-26 20:42:35,808 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['interface Gi0/2', 'description Access Port to VLAN 999 (Nornir)']} on 2 hosts
+2022-05-26 20:42:36,872 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['interface Gi0/3', 'description Access Port to VLAN 1 (Nornir)']} on 2 hosts
+2022-05-26 20:42:38,253 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['interface Gi0/1', 'description Trunk Port (Nornir)']} on 2 hosts
+2022-05-26 20:42:39,243 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['interface Gi0/2', 'description Access Port to VLAN 999 (Nornir)']} on 2 hosts
+2022-05-26 20:42:40,277 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['interface Gi0/3', 'description Access Port to VLAN 1 (Nornir)']} on 2 hosts
+2022-05-26 20:42:41,365 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh interface description'} on 2 hosts
+2022-05-26 20:45:46,057 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh interface switchport', 'use_textfsm': True} on 2 hosts
+2022-05-26 20:46:14,200 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh interface switchport', 'use_textfsm': True} on 2 hosts
+2022-05-26 20:47:14,949 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh interface switchport', 'use_textfsm': True} on 2 hosts
+2022-05-26 21:06:08,453 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh interface switchport', 'use_textfsm': True} on 2 hosts
+2022-05-26 21:06:10,701 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['interface Gi0/1', 'description Trunk Port (Nornir)']} on 2 hosts
+2022-05-26 21:06:11,649 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['interface Gi0/2', 'description Access Port to VLAN 999 (Nornir)']} on 2 hosts
+2022-05-26 21:06:12,641 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['interface Gi0/3', 'description Access Port to VLAN 1 (Nornir)']} on 2 hosts
+2022-05-26 21:06:13,842 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['interface Gi0/1', 'description Trunk Port (Nornir)']} on 2 hosts
+2022-05-26 21:06:15,714 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['interface Gi0/2', 'description Access Port to VLAN 999 (Nornir)']} on 2 hosts
+2022-05-26 21:06:17,114 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['interface Gi0/3', 'description Access Port to VLAN 1 (Nornir)']} on 2 hosts
+2022-05-26 21:06:18,485 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'sh interface description'} on 2 hosts
+2024-06-07 00:03:16,295 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br', 'use_textfsm': True} on 6 hosts
+2024-06-07 00:03:26,311 - nornir.core.task -    ERROR -      start() - Host 'ro3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\anaconda3\envs\env_ivan\lib\site-packages\netmiko\base_connection.py", line 1137, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "D:\ProgramData\anaconda3\envs\env_ivan\lib\site-packages\paramiko\client.py", line 386, in connect
+    sock.connect(addr)
+TimeoutError: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\MSI-NB\AppData\Roaming\Python\Python310\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\MSI-NB\AppData\Roaming\Python\Python310\site-packages\nornir_netmiko\tasks\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\MSI-NB\AppData\Roaming\Python\Python310\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\MSI-NB\AppData\Roaming\Python\Python310\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\MSI-NB\AppData\Roaming\Python\Python310\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "D:\ProgramData\anaconda3\envs\env_ivan\lib\site-packages\netmiko\ssh_dispatcher.py", line 399, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "D:\ProgramData\anaconda3\envs\env_ivan\lib\site-packages\netmiko\base_connection.py", line 488, in __init__
+    self._open()
+  File "D:\ProgramData\anaconda3\envs\env_ivan\lib\site-packages\netmiko\base_connection.py", line 493, in _open
+    self.establish_connection()
+  File "D:\ProgramData\anaconda3\envs\env_ivan\lib\site-packages\netmiko\base_connection.py", line 1159, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 192.168.200.3:22
+
+
+
+2024-06-07 00:03:26,312 - nornir.core.task -    ERROR -      start() - Host 'ro1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\anaconda3\envs\env_ivan\lib\site-packages\netmiko\base_connection.py", line 1137, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "D:\ProgramData\anaconda3\envs\env_ivan\lib\site-packages\paramiko\client.py", line 386, in connect
+    sock.connect(addr)
+TimeoutError: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\MSI-NB\AppData\Roaming\Python\Python310\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\MSI-NB\AppData\Roaming\Python\Python310\site-packages\nornir_netmiko\tasks\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\MSI-NB\AppData\Roaming\Python\Python310\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\MSI-NB\AppData\Roaming\Python\Python310\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\MSI-NB\AppData\Roaming\Python\Python310\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "D:\ProgramData\anaconda3\envs\env_ivan\lib\site-packages\netmiko\ssh_dispatcher.py", line 399, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "D:\ProgramData\anaconda3\envs\env_ivan\lib\site-packages\netmiko\base_connection.py", line 488, in __init__
+    self._open()
+  File "D:\ProgramData\anaconda3\envs\env_ivan\lib\site-packages\netmiko\base_connection.py", line 493, in _open
+    self.establish_connection()
+  File "D:\ProgramData\anaconda3\envs\env_ivan\lib\site-packages\netmiko\base_connection.py", line 1159, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 192.168.200.1:22
+
+
+
+2024-06-07 00:03:26,312 - nornir.core.task -    ERROR -      start() - Host 'ro2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\anaconda3\envs\env_ivan\lib\site-packages\netmiko\base_connection.py", line 1137, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "D:\ProgramData\anaconda3\envs\env_ivan\lib\site-packages\paramiko\client.py", line 386, in connect
+    sock.connect(addr)
+TimeoutError: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\MSI-NB\AppData\Roaming\Python\Python310\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\MSI-NB\AppData\Roaming\Python\Python310\site-packages\nornir_netmiko\tasks\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\MSI-NB\AppData\Roaming\Python\Python310\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\MSI-NB\AppData\Roaming\Python\Python310\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\MSI-NB\AppData\Roaming\Python\Python310\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "D:\ProgramData\anaconda3\envs\env_ivan\lib\site-packages\netmiko\ssh_dispatcher.py", line 399, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "D:\ProgramData\anaconda3\envs\env_ivan\lib\site-packages\netmiko\base_connection.py", line 488, in __init__
+    self._open()
+  File "D:\ProgramData\anaconda3\envs\env_ivan\lib\site-packages\netmiko\base_connection.py", line 493, in _open
+    self.establish_connection()
+  File "D:\ProgramData\anaconda3\envs\env_ivan\lib\site-packages\netmiko\base_connection.py", line 1159, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 192.168.200.2:22
+
+
+
+2024-06-07 00:03:26,313 - nornir.core.task -    ERROR -      start() - Host 'sw1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\anaconda3\envs\env_ivan\lib\site-packages\netmiko\base_connection.py", line 1137, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "D:\ProgramData\anaconda3\envs\env_ivan\lib\site-packages\paramiko\client.py", line 386, in connect
+    sock.connect(addr)
+TimeoutError: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\MSI-NB\AppData\Roaming\Python\Python310\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\MSI-NB\AppData\Roaming\Python\Python310\site-packages\nornir_netmiko\tasks\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\MSI-NB\AppData\Roaming\Python\Python310\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\MSI-NB\AppData\Roaming\Python\Python310\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\MSI-NB\AppData\Roaming\Python\Python310\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "D:\ProgramData\anaconda3\envs\env_ivan\lib\site-packages\netmiko\ssh_dispatcher.py", line 399, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "D:\ProgramData\anaconda3\envs\env_ivan\lib\site-packages\netmiko\base_connection.py", line 488, in __init__
+    self._open()
+  File "D:\ProgramData\anaconda3\envs\env_ivan\lib\site-packages\netmiko\base_connection.py", line 493, in _open
+    self.establish_connection()
+  File "D:\ProgramData\anaconda3\envs\env_ivan\lib\site-packages\netmiko\base_connection.py", line 1159, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 192.168.200.10:22
+
+
+
+2024-06-07 00:03:26,313 - nornir.core.task -    ERROR -      start() - Host 'sw2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\anaconda3\envs\env_ivan\lib\site-packages\netmiko\base_connection.py", line 1137, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "D:\ProgramData\anaconda3\envs\env_ivan\lib\site-packages\paramiko\client.py", line 386, in connect
+    sock.connect(addr)
+TimeoutError: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\MSI-NB\AppData\Roaming\Python\Python310\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\MSI-NB\AppData\Roaming\Python\Python310\site-packages\nornir_netmiko\tasks\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\MSI-NB\AppData\Roaming\Python\Python310\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\MSI-NB\AppData\Roaming\Python\Python310\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\MSI-NB\AppData\Roaming\Python\Python310\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "D:\ProgramData\anaconda3\envs\env_ivan\lib\site-packages\netmiko\ssh_dispatcher.py", line 399, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "D:\ProgramData\anaconda3\envs\env_ivan\lib\site-packages\netmiko\base_connection.py", line 488, in __init__
+    self._open()
+  File "D:\ProgramData\anaconda3\envs\env_ivan\lib\site-packages\netmiko\base_connection.py", line 493, in _open
+    self.establish_connection()
+  File "D:\ProgramData\anaconda3\envs\env_ivan\lib\site-packages\netmiko\base_connection.py", line 1159, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 192.168.200.11:22
+
+
+
+2024-06-07 00:03:26,313 - nornir.core.task -    ERROR -      start() - Host 'ro4': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "D:\ProgramData\anaconda3\envs\env_ivan\lib\site-packages\netmiko\base_connection.py", line 1137, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "D:\ProgramData\anaconda3\envs\env_ivan\lib\site-packages\paramiko\client.py", line 386, in connect
+    sock.connect(addr)
+TimeoutError: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\MSI-NB\AppData\Roaming\Python\Python310\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\MSI-NB\AppData\Roaming\Python\Python310\site-packages\nornir_netmiko\tasks\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\MSI-NB\AppData\Roaming\Python\Python310\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\MSI-NB\AppData\Roaming\Python\Python310\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\MSI-NB\AppData\Roaming\Python\Python310\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "D:\ProgramData\anaconda3\envs\env_ivan\lib\site-packages\netmiko\ssh_dispatcher.py", line 399, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "D:\ProgramData\anaconda3\envs\env_ivan\lib\site-packages\netmiko\base_connection.py", line 488, in __init__
+    self._open()
+  File "D:\ProgramData\anaconda3\envs\env_ivan\lib\site-packages\netmiko\base_connection.py", line 493, in _open
+    self.establish_connection()
+  File "D:\ProgramData\anaconda3\envs\env_ivan\lib\site-packages\netmiko\base_connection.py", line 1159, in establish_connection
+    raise NetmikoTimeoutException(msg)
+netmiko.exceptions.NetmikoTimeoutException: TCP connection to device failed.
+
+Common causes of this problem are:
+1. Incorrect hostname or IP address.
+2. Wrong TCP port.
+3. Intermediate firewall blocking access.
+
+Device settings: cisco_ios 192.168.200.4:22
+
+
+

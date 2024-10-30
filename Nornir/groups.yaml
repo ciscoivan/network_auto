@@ -1,0 +1,13 @@
+---
+cisco_group1:
+    platform: ios
+
+cisco_group2:
+    platform: ios
+
+cisco_group3:
+    platform: ios
+
+huawei_group4:
+    platform: huawei
+

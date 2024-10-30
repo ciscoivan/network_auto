@@ -1,0 +1,48 @@
+---
+ro1:
+    hostname: 192.168.200.1
+    username: ivan
+    password: '123.com'
+    groups:
+        - cisco_group1
+    data:
+        building: '1'
+        level: '1'
+ro2:
+    hostname: 192.168.200.2
+    groups:
+        - cisco_group1
+    data:
+        building: '1'
+        level: '2'
+ro3:
+    hostname: 192.168.200.3
+    groups:
+        - cisco_group2
+    data:
+        building: '2'
+        level: '1'
+ro4:
+    hostname: 192.168.200.4
+    groups:
+        - cisco_group2
+    data:
+        building: '2'
+        level: '2'
+
+sw1:
+    hostname: 192.168.200.10
+    groups:
+        - cisco_group3
+    data:
+        building: '3'
+        level: '1'
+
+sw2:
+    hostname: 192.168.200.11
+    groups:
+        - cisco_group3
+    data:
+        building: '3'
+        level: '2'
+
