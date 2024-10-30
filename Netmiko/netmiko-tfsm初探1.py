@@ -1,7 +1,7 @@
 import netmiko
 import textfsm
 import json
-with netmiko.ConnectHandler(device_type='huawei', ip='10.1.1.1', username='ivan', password='123.com') as connect:
+with netmiko.ConnectHandler(device_type='huawei', ip='172.16.1.1', username='noc', password='123.Com') as connect:
     print('已经成功登录： 10.1.1.1' + '\n')
     output = connect.send_command('display cpu-usage')
     print(output)

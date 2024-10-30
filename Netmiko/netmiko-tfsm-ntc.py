@@ -2,9 +2,9 @@ from netmiko import ConnectHandler
 from pprint import  pprint
 connection_info = {
         'device_type': 'cisco_ios',
-        'host': '192.168.200.10',
-        'username': 'ivan',
-        'password': '123.com'
+        'host': '172.16.1.1',
+        'username': 'noc',
+        'password': '123.Com'
 }
 
 with ConnectHandler(**connection_info) as conn:
