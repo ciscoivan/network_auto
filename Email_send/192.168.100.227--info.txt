@@ -1,0 +1,592 @@
+
+Pthon01-router>enable
+Password: 
+Pthon01-router#term len 0
+Pthon01-router#show run
+Building configuration...
+
+Current configuration : 1689 bytes
+!
+! Last configuration change at 14:27:48 UTC Mon May 9 2022 by ivan
+!
+version 15.5
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no platform punt-keepalive disable-kernel-core
+platform console auto
+!
+hostname Pthon01-router
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 5 $1$cXIp$jUoKx.VgangxgJbgziJcL.
+!
+aaa new-model
+!
+!
+!
+!
+!
+!
+!
+aaa session-id common
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+
+ip domain name www.cisco.com
+
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+subscriber templating
+multilink bundle-name authenticated
+!
+!
+license udi pid CSR1000V sn 9SQ6VAXU93S
+license accept end user agreement
+license boot level ipbase
+!
+username ivan privilege 15 password 0 123.com
+!
+redundancy
+!
+!
+!
+ip ssh version 2
+!
+!
+!
+!
+interface Loopback20
+ ip address 192.168.20.20 255.255.255.0
+!
+interface Loopback21
+ ip address 192.168.21.21 255.255.255.0
+!
+interface Loopback22
+ ip address 192.168.22.22 255.255.255.0
+!
+interface Loopback23
+ ip address 192.168.23.23 255.255.255.0
+!
+interface Loopback24
+ ip address 192.168.24.24 255.255.255.0
+!
+interface Loopback25
+ ip address 192.168.25.25 255.255.255.0
+!
+interface Loopback26
+ ip address 192.168.26.26 255.255.255.0
+!
+interface Loopback27
+ ip address 192.168.27.27 255.255.255.0
+!
+interface Loopback28
+ ip address 192.168.28.28 255.255.255.0
+!
+interface Loopback29
+ ip address 192.168.29.29 255.255.255.0
+!
+interface GigabitEthernet1
+ ip address 192.168.100.227 255.255.255.0
+ negotiation auto
+!
+router ospf 110
+!
+!
+virtual-service csr_mgmt
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+ip route 0.0.0.0 0.0.0.0 192.168.100.254
+!
+!
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ stopbits 1
+line vty 0 4
+ transport input all
+!
+!
+end
+
+Pthon01-router#show ip int br
+Interface              IP-Address      OK? Method Status                Protocol
+GigabitEthernet1       192.168.100.227 YES NVRAM  up                    up      
+Loopback20             192.168.20.20   YES NVRAM  up                    up      
+Loopback21             192.168.21.21   YES NVRAM  up                    up      
+Loopback22             192.168.22.22   YES NVRAM  up                    up      
+Loopback23             192.168.23.23   YES NVRAM  up                    up      
+Loopback24             192.168.24.24   YES NVRAM  up                    up      
+Loopback25             192.168.25.25   YES NVRAM  up                    up      
+Loopback26             192.168.26.26   YES NVRAM  up                    up      
+Loopback27             192.168.27.27   YES NVRAM  up                    up      
+Loopback28             192.168.28.28   YES NVRAM  up                    up      
+Loopback29             192.168.29.29   YES NVRAM  up                    up      
+Pthon01-router#show ip route
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route, H - NHRP, l - LISP
+       a - application route
+       + - replicated route, % - next hop override
+
+Gateway of last resort is 192.168.100.254 to network 0.0.0.0
+
+S*    0.0.0.0/0 [1/0] via 192.168.100.254
+      192.168.20.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.20.0/24 is directly connected, Loopback20
+L        192.168.20.20/32 is directly connected, Loopback20
+      192.168.21.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.21.0/24 is directly connected, Loopback21
+L        192.168.21.21/32 is directly connected, Loopback21
+      192.168.22.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.22.0/24 is directly connected, Loopback22
+L        192.168.22.22/32 is directly connected, Loopback22
+      192.168.23.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.23.0/24 is directly connected, Loopback23
+L        192.168.23.23/32 is directly connected, Loopback23
+      192.168.24.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.24.0/24 is directly connected, Loopback24
+L        192.168.24.24/32 is directly connected, Loopback24
+      192.168.25.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.25.0/24 is directly connected, Loopback25
+L        192.168.25.25/32 is directly connected, Loopback25
+      192.168.26.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.26.0/24 is directly connected, Loopback26
+L        192.168.26.26/32 is directly connected, Loopback26
+      192.168.27.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.27.0/24 is directly connected, Loopback27
+L        192.168.27.27/32 is directly connected, Loopback27
+      192.168.28.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.28.0/24 is directly connected, Loopback28
+L        192.168.28.28/32 is directly connected, Loopback28
+      192.168.29.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.29.0/24 is directly connected, Loopback29
+L        192.168.29.29/32 is directly connected, Loopback29
+      192.168.100.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.100.0/24 is directly connected, GigabitEthernet1
+L        192.168.100.227/32 is directly connected, GigabitEthernet1
+Pthon01-router#
+Pthon01-router>enable
+Password: 
+Pthon01-router#term len 0
+Pthon01-router#show run
+Building configuration...
+
+Current configuration : 1689 bytes
+!
+! Last configuration change at 14:27:48 UTC Mon May 9 2022 by ivan
+!
+version 15.5
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no platform punt-keepalive disable-kernel-core
+platform console auto
+!
+hostname Pthon01-router
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 5 $1$cXIp$jUoKx.VgangxgJbgziJcL.
+!
+aaa new-model
+!
+!
+!
+!
+!
+!
+!
+aaa session-id common
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+
+ip domain name www.cisco.com
+
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+subscriber templating
+multilink bundle-name authenticated
+!
+!
+license udi pid CSR1000V sn 9SQ6VAXU93S
+license accept end user agreement
+license boot level ipbase
+!
+username ivan privilege 15 password 0 123.com
+!
+redundancy
+!
+!
+!
+ip ssh version 2
+!
+!
+!
+!
+interface Loopback20
+ ip address 192.168.20.20 255.255.255.0
+!
+interface Loopback21
+ ip address 192.168.21.21 255.255.255.0
+!
+interface Loopback22
+ ip address 192.168.22.22 255.255.255.0
+!
+interface Loopback23
+ ip address 192.168.23.23 255.255.255.0
+!
+interface Loopback24
+ ip address 192.168.24.24 255.255.255.0
+!
+interface Loopback25
+ ip address 192.168.25.25 255.255.255.0
+!
+interface Loopback26
+ ip address 192.168.26.26 255.255.255.0
+!
+interface Loopback27
+ ip address 192.168.27.27 255.255.255.0
+!
+interface Loopback28
+ ip address 192.168.28.28 255.255.255.0
+!
+interface Loopback29
+ ip address 192.168.29.29 255.255.255.0
+!
+interface GigabitEthernet1
+ ip address 192.168.100.227 255.255.255.0
+ negotiation auto
+!
+router ospf 110
+!
+!
+virtual-service csr_mgmt
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+ip route 0.0.0.0 0.0.0.0 192.168.100.254
+!
+!
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ stopbits 1
+line vty 0 4
+ transport input all
+!
+!
+end
+
+Pthon01-router#show ip int br
+Interface              IP-Address      OK? Method Status                Protocol
+GigabitEthernet1       192.168.100.227 YES NVRAM  up                    up      
+Loopback20             192.168.20.20   YES NVRAM  up                    up      
+Loopback21             192.168.21.21   YES NVRAM  up                    up      
+Loopback22             192.168.22.22   YES NVRAM  up                    up      
+Loopback23             192.168.23.23   YES NVRAM  up                    up      
+Loopback24             192.168.24.24   YES NVRAM  up                    up      
+Loopback25             192.168.25.25   YES NVRAM  up                    up      
+Loopback26             192.168.26.26   YES NVRAM  up                    up      
+Loopback27             192.168.27.27   YES NVRAM  up                    up      
+Loopback28             192.168.28.28   YES NVRAM  up                    up      
+Loopback29             192.168.29.29   YES NVRAM  up                    up      
+Pthon01-router#show ip route
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route, H - NHRP, l - LISP
+       a - application route
+       + - replicated route, % - next hop override
+
+Gateway of last resort is 192.168.100.254 to network 0.0.0.0
+
+S*    0.0.0.0/0 [1/0] via 192.168.100.254
+      192.168.20.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.20.0/24 is directly connected, Loopback20
+L        192.168.20.20/32 is directly connected, Loopback20
+      192.168.21.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.21.0/24 is directly connected, Loopback21
+L        192.168.21.21/32 is directly connected, Loopback21
+      192.168.22.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.22.0/24 is directly connected, Loopback22
+L        192.168.22.22/32 is directly connected, Loopback22
+      192.168.23.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.23.0/24 is directly connected, Loopback23
+L        192.168.23.23/32 is directly connected, Loopback23
+      192.168.24.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.24.0/24 is directly connected, Loopback24
+L        192.168.24.24/32 is directly connected, Loopback24
+      192.168.25.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.25.0/24 is directly connected, Loopback25
+L        192.168.25.25/32 is directly connected, Loopback25
+      192.168.26.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.26.0/24 is directly connected, Loopback26
+L        192.168.26.26/32 is directly connected, Loopback26
+      192.168.27.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.27.0/24 is directly connected, Loopback27
+L        192.168.27.27/32 is directly connected, Loopback27
+      192.168.28.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.28.0/24 is directly connected, Loopback28
+L        192.168.28.28/32 is directly connected, Loopback28
+      192.168.29.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.29.0/24 is directly connected, Loopback29
+L        192.168.29.29/32 is directly connected, Loopback29
+      192.168.100.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.100.0/24 is directly connected, GigabitEthernet1
+L        192.168.100.227/32 is directly connected, GigabitEthernet1
+Pthon01-router#
+Pthon01-router>enable
+Password: 
+Pthon01-router#term len 0
+Pthon01-router#show run
+Building configuration...
+
+Current configuration : 1689 bytes
+!
+! Last configuration change at 14:27:48 UTC Mon May 9 2022 by ivan
+!
+version 15.5
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no platform punt-keepalive disable-kernel-core
+platform console auto
+!
+hostname Pthon01-router
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 5 $1$cXIp$jUoKx.VgangxgJbgziJcL.
+!
+aaa new-model
+!
+!
+!
+!
+!
+!
+!
+aaa session-id common
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+
+ip domain name www.cisco.com
+
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+subscriber templating
+multilink bundle-name authenticated
+!
+!
+license udi pid CSR1000V sn 9SQ6VAXU93S
+license accept end user agreement
+license boot level ipbase
+!
+username ivan privilege 15 password 0 123.com
+!
+redundancy
+!
+!
+!
+ip ssh version 2
+!
+!
+!
+!
+interface Loopback20
+ ip address 192.168.20.20 255.255.255.0
+!
+interface Loopback21
+ ip address 192.168.21.21 255.255.255.0
+!
+interface Loopback22
+ ip address 192.168.22.22 255.255.255.0
+!
+interface Loopback23
+ ip address 192.168.23.23 255.255.255.0
+!
+interface Loopback24
+ ip address 192.168.24.24 255.255.255.0
+!
+interface Loopback25
+ ip address 192.168.25.25 255.255.255.0
+!
+interface Loopback26
+ ip address 192.168.26.26 255.255.255.0
+!
+interface Loopback27
+ ip address 192.168.27.27 255.255.255.0
+!
+interface Loopback28
+ ip address 192.168.28.28 255.255.255.0
+!
+interface Loopback29
+ ip address 192.168.29.29 255.255.255.0
+!
+interface GigabitEthernet1
+ ip address 192.168.100.227 255.255.255.0
+ negotiation auto
+!
+router ospf 110
+!
+!
+virtual-service csr_mgmt
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+ip route 0.0.0.0 0.0.0.0 192.168.100.254
+!
+!
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ stopbits 1
+line vty 0 4
+ transport input all
+!
+!
+end
+
+Pthon01-router#show ip int br
+Interface              IP-Address      OK? Method Status                Protocol
+GigabitEthernet1       192.168.100.227 YES NVRAM  up                    up      
+Loopback20             192.168.20.20   YES NVRAM  up                    up      
+Loopback21             192.168.21.21   YES NVRAM  up                    up      
+Loopback22             192.168.22.22   YES NVRAM  up                    up      
+Loopback23             192.168.23.23   YES NVRAM  up                    up      
+Loopback24             192.168.24.24   YES NVRAM  up                    up      
+Loopback25             192.168.25.25   YES NVRAM  up                    up      
+Loopback26             192.168.26.26   YES NVRAM  up                    up      
+Loopback27             192.168.27.27   YES NVRAM  up                    up      
+Loopback28             192.168.28.28   YES NVRAM  up                    up      
+Loopback29             192.168.29.29   YES NVRAM  up                    up      
+Pthon01-router#show ip route
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route, H - NHRP, l - LISP
+       a - application route
+       + - replicated route, % - next hop override
+
+Gateway of last resort is 192.168.100.254 to network 0.0.0.0
+
+S*    0.0.0.0/0 [1/0] via 192.168.100.254
+      192.168.20.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.20.0/24 is directly connected, Loopback20
+L        192.168.20.20/32 is directly connected, Loopback20
+      192.168.21.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.21.0/24 is directly connected, Loopback21
+L        192.168.21.21/32 is directly connected, Loopback21
+      192.168.22.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.22.0/24 is directly connected, Loopback22
+L        192.168.22.22/32 is directly connected, Loopback22
+      192.168.23.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.23.0/24 is directly connected, Loopback23
+L        192.168.23.23/32 is directly connected, Loopback23
+      192.168.24.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.24.0/24 is directly connected, Loopback24
+L        192.168.24.24/32 is directly connected, Loopback24
+      192.168.25.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.25.0/24 is directly connected, Loopback25
+L        192.168.25.25/32 is directly connected, Loopback25
+      192.168.26.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.26.0/24 is directly connected, Loopback26
+L        192.168.26.26/32 is directly connected, Loopback26
+      192.168.27.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.27.0/24 is directly connected, Loopback27
+L        192.168.27.27/32 is directly connected, Loopback27
+      192.168.28.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.28.0/24 is directly connected, Loopback28
+L        192.168.28.28/32 is directly connected, Loopback28
+      192.168.29.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.29.0/24 is directly connected, Loopback29
+L        192.168.29.29/32 is directly connected, Loopback29
+      192.168.100.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.100.0/24 is directly connected, GigabitEthernet1
+L        192.168.100.227/32 is directly connected, GigabitEthernet1
+Pthon01-router#

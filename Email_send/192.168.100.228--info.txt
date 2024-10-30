@@ -1,0 +1,415 @@
+
+python2-router>enable
+Password: 
+python2-router#term len 0
+python2-router#show run
+Building configuration...
+
+Current configuration : 1154 bytes
+!
+! Last configuration change at 11:57:00 UTC Wed May 4 2022
+!
+version 15.5
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no platform punt-keepalive disable-kernel-core
+platform console auto
+!
+hostname python2-router
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 5 $1$7WMQ$Uv0ABdebdksrN578sysb60
+!
+aaa new-model
+!
+!
+!
+!
+!
+!
+!
+aaa session-id common
+!
+ip vrf a
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+
+ip domain name www.cisoc.com
+
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+subscriber templating
+multilink bundle-name authenticated
+!
+!
+license udi pid CSR1000V sn 9W76MMVJYXE
+license boot level ipbase
+!
+username ivan privilege 15 password 0 123.com
+!
+redundancy
+!
+!
+!
+ip ssh version 2
+!
+!
+!
+!
+interface GigabitEthernet1
+ ip address 192.168.100.228 255.255.255.0
+ negotiation auto
+!
+interface GigabitEthernet2
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet3
+ no ip address
+ shutdown
+ negotiation auto
+!
+!
+virtual-service csr_mgmt
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+ip route 0.0.0.0 0.0.0.0 192.168.100.254
+!
+!
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ stopbits 1
+line vty 0 4
+ transport input all
+!
+!
+end
+
+python2-router#show ip int br
+Interface              IP-Address      OK? Method Status                Protocol
+GigabitEthernet1       192.168.100.228 YES NVRAM  up                    up      
+GigabitEthernet2       unassigned      YES NVRAM  administratively down down    
+GigabitEthernet3       unassigned      YES NVRAM  administratively down down    
+python2-router#show ip route
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route, H - NHRP, l - LISP
+       a - application route
+       + - replicated route, % - next hop override
+
+Gateway of last resort is 192.168.100.254 to network 0.0.0.0
+
+S*    0.0.0.0/0 [1/0] via 192.168.100.254
+      192.168.100.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.100.0/24 is directly connected, GigabitEthernet1
+L        192.168.100.228/32 is directly connected, GigabitEthernet1
+python2-router#
+python2-router>enable
+Password: 
+python2-router#term len 0
+python2-router#show run
+Building configuration...
+
+Current configuration : 1154 bytes
+!
+! Last configuration change at 11:57:00 UTC Wed May 4 2022
+!
+version 15.5
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no platform punt-keepalive disable-kernel-core
+platform console auto
+!
+hostname python2-router
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 5 $1$7WMQ$Uv0ABdebdksrN578sysb60
+!
+aaa new-model
+!
+!
+!
+!
+!
+!
+!
+aaa session-id common
+!
+ip vrf a
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+
+ip domain name www.cisoc.com
+
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+subscriber templating
+multilink bundle-name authenticated
+!
+!
+license udi pid CSR1000V sn 9W76MMVJYXE
+license boot level ipbase
+!
+username ivan privilege 15 password 0 123.com
+!
+redundancy
+!
+!
+!
+ip ssh version 2
+!
+!
+!
+!
+interface GigabitEthernet1
+ ip address 192.168.100.228 255.255.255.0
+ negotiation auto
+!
+interface GigabitEthernet2
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet3
+ no ip address
+ shutdown
+ negotiation auto
+!
+!
+virtual-service csr_mgmt
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+ip route 0.0.0.0 0.0.0.0 192.168.100.254
+!
+!
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ stopbits 1
+line vty 0 4
+ transport input all
+!
+!
+end
+
+python2-router#show ip int br
+Interface              IP-Address      OK? Method Status                Protocol
+GigabitEthernet1       192.168.100.228 YES NVRAM  up                    up      
+GigabitEthernet2       unassigned      YES NVRAM  administratively down down    
+GigabitEthernet3       unassigned      YES NVRAM  administratively down down    
+python2-router#show ip route
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route, H - NHRP, l - LISP
+       a - application route
+       + - replicated route, % - next hop override
+
+Gateway of last resort is 192.168.100.254 to network 0.0.0.0
+
+S*    0.0.0.0/0 [1/0] via 192.168.100.254
+      192.168.100.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.100.0/24 is directly connected, GigabitEthernet1
+L        192.168.100.228/32 is directly connected, GigabitEthernet1
+python2-router#
+python2-router>enable
+Password: 
+python2-router#term len 0
+python2-router#show run
+Building configuration...
+
+Current configuration : 1154 bytes
+!
+! Last configuration change at 11:57:00 UTC Wed May 4 2022
+!
+version 15.5
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no platform punt-keepalive disable-kernel-core
+platform console auto
+!
+hostname python2-router
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 5 $1$7WMQ$Uv0ABdebdksrN578sysb60
+!
+aaa new-model
+!
+!
+!
+!
+!
+!
+!
+aaa session-id common
+!
+ip vrf a
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+
+ip domain name www.cisoc.com
+
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+subscriber templating
+multilink bundle-name authenticated
+!
+!
+license udi pid CSR1000V sn 9W76MMVJYXE
+license boot level ipbase
+!
+username ivan privilege 15 password 0 123.com
+!
+redundancy
+!
+!
+!
+ip ssh version 2
+!
+!
+!
+!
+interface GigabitEthernet1
+ ip address 192.168.100.228 255.255.255.0
+ negotiation auto
+!
+interface GigabitEthernet2
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet3
+ no ip address
+ shutdown
+ negotiation auto
+!
+!
+virtual-service csr_mgmt
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+ip route 0.0.0.0 0.0.0.0 192.168.100.254
+!
+!
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ stopbits 1
+line vty 0 4
+ transport input all
+!
+!
+end
+
+python2-router#show ip int br
+Interface              IP-Address      OK? Method Status                Protocol
+GigabitEthernet1       192.168.100.228 YES NVRAM  up                    up      
+GigabitEthernet2       unassigned      YES NVRAM  administratively down down    
+GigabitEthernet3       unassigned      YES NVRAM  administratively down down    
+python2-router#show ip route
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route, H - NHRP, l - LISP
+       a - application route
+       + - replicated route, % - next hop override
+
+Gateway of last resort is 192.168.100.254 to network 0.0.0.0
+
+S*    0.0.0.0/0 [1/0] via 192.168.100.254
+      192.168.100.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.100.0/24 is directly connected, GigabitEthernet1
+L        192.168.100.228/32 is directly connected, GigabitEthernet1
+python2-router#
