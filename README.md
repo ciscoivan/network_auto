@@ -1,4 +1,4 @@
-# network_auto
+network_auto
 1.本代码适用于网络工程师的工作和学习
 
 2.网络项目Network_Automatic_Inspect代码来自于https://github.com/singvis/Network_Automatic_Inspect--点滴技术
@@ -21,4 +21,20 @@ parmiko
 
 
 BY ivan  李阳
+
+
+![image](https://github.com/user-attachments/assets/73870ba8-4125-4532-b8c3-07ef4d7a218d)
+![image](https://github.com/user-attachments/assets/73bd8f08-c533-46ae-9f44-c801925eab5b)
+![image](https://github.com/user-attachments/assets/a0c860db-c6b8-434c-bd1c-cf497f69d7e6)
+
+-------------------------------------------------------------------------------------------
+![image](https://github.com/user-attachments/assets/a60a8bce-6668-4353-b58b-0695b934b57c)
+![image](https://github.com/user-attachments/assets/4131c075-7f9b-48fb-9039-9a4b899d5832)
+
+
+
+
+
+
+
 
