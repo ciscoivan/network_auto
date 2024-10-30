@@ -1,0 +1,13 @@
+Value Filldown D_name (\S+)
+Value Filldown PROCESS (\d+)
+Value AREA (\S+)
+Value LOCAL_INT_IP (\S+)
+Value LOCAL_INT (\S+)
+Value DEST_RouterID (\S+)
+Value Required DEST_INT_IP (\S+)
+
+Start
+  ^<${D_name}>
+  ^\s+OSPF\sProcess\s${PROCESS}
+  ^\s+Area\s${AREA}\sinterface\s${LOCAL_INT_IP}\(${LOCAL_INT}\)
+  ^\s+Router\sID:\s${DEST_RouterID}\s+Address:\s${DEST_INT_IP} -> Record

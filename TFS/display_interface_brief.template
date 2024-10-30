@@ -1,0 +1,9 @@
+Value E_INT (Eth-Trunk\d+)
+Value PHY (\S+)
+Value Protocol (\S+)
+Value List PHY_INT (GigabitEthernet\d+/\d+/\d+)
+
+Start
+  ^Eth-Trunk\d+ -> Continue.Record
+  ^${E_INT}\s+${PHY}\s+${Protocol}\s
+  ^\s+${PHY_INT}

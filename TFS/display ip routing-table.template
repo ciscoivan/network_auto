@@ -1,0 +1,8 @@
+Value Dest (\S+/\S+)
+Value List NEXT (\S+\.\S+\.\S+\.\S+)
+
+Start
+  ^\s+\S+/\S+\s+ -> Continue.Record
+  ^\s+${Dest}\s+.+\s+${NEXT}\s+
+  ^\s.+\s${NEXT}\s+
+

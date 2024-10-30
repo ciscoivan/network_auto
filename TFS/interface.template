@@ -1,0 +1,9 @@
+Value Tru_INT (Eth-Trunk\d+)
+Value PHY (up|down|\*down)
+Value Protocol (up|down)
+Value List Phy_INT (\S+)
+
+Start
+  ^Eth-Trunk\d+ -> Continue.Record
+  ^${Tru_INT}\s+${PHY}\s+${Protocol}\s
+  ^\s+${Phy_INT} 

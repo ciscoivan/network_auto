@@ -1,0 +1,7 @@
+Value Interfaces (\S+)
+Value Address (\S+)
+Value PHY (up|down)
+Value Proto (\S+)
+
+Start
+  ^${Interfaces}\s+${Address}\s+${PHY}\s+${Proto} -> Record

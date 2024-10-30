@@ -1,0 +1,27 @@
+Route Flags: R - relay, D - download to fib, T - to vpn-instance
+------------------------------------------------------------------------------
+Routing Tables: Public
+         Destinations : 91       Routes : 107
+
+Destination/Mask    Proto   Pre  Cost      Flags NextHop         Interface
+
+        0.0.0.0/0   Static  60   0           D   187.184.170.65 GigabitEthernet0/0/1
+                    Static  60   0           D   183.193.7.127   GigabitEthernet0/0/0
+                    Static  60   0           D   187.143.59.221  GigabitEthernet0/0/2
+                    Static  60   0           D   187.185.85.123  GigabitEthernet0/0/4
+                    Static  60   0           D   187.144.47.22  GigabitEthernet0/0/6
+                    Static  60   0           D   187.144.47.25  GigabitEthernet0/0/5
+                    Static  60   0           D   187.143.56.17   GigabitEthernet0/0/7
+                    Static  60   0           D   187.144.47.221  GigabitEthernet0/0/8
+                    Static  60   0           D   187.143.59.23  GigabitEthernet0/0/9
+                    Static  60   0           D   187.143.56.45   GigabitEthernet0/0/3
+       10.0.0.0/8   Static  60   0           D   172.17.222.10   Virtual-Template3
+   10.101.100.0/24  Static  60   0          RD   10.128.1.93     Vlanif12
+                    Static  60   0          RD   10.128.1.94     Vlanif12
+     10.102.0.0/15  Static  60   0          RD   10.128.1.93     Vlanif12
+                    Static  60   0          RD   10.128.1.94     Vlanif12
+     10.104.0.0/13  Static  60   0          RD   10.128.1.93     Vlanif12
+                    Static  60   0          RD   10.128.1.94     Vlanif12
+    10.128.1.88/29  Direct  0    0           D   10.128.1.89     Vlanif12
+    10.128.1.89/32  Direct  0    0           D   127.0.0.1       Vlanif12
+    10.128.1.95/32  Direct  0    0           D   127.0.0.1       Vlanif12

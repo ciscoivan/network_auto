@@ -1,0 +1,5 @@
+Value ID (\d+)
+Value hop (\S+)
+
+Start
+  ^ ${ID} ${hop} -> Record

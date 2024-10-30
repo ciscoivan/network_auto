@@ -1,0 +1,13 @@
+Value Filldown RID (\S+)
+Value Filldown PROCESS (\S+)
+Value AREA (\S+)
+Value LOCAL_IP (\S+)
+Value LOCAL_INTERFACE (\S+)
+Value NRD (\S+)
+Value Required NIP (\S+)
+
+Start
+  ^<${RID}>
+  ^\s+OSPF\sProcess\s${PROCESS}
+  ^\sArea\s${AREA}\sinterface\s${LOCAL_IP}\(${LOCAL_INTERFACE}\)
+  ^\sRouter\sID:\s${NRD}\s+Address:\s${NIP} -> Record

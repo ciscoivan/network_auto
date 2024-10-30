@@ -1,0 +1,5 @@
+Value Date (....-..-..)
+Value Time (..:..:..)
+
+Start
+  ^${Date} ${Time} -> Record

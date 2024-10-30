@@ -1,0 +1,9 @@
+Value Interface (\S+)
+Value Type (\w+)
+Value Dot1x (dot1x)
+
+Start
+  ^interface\s${Interface}
+  ^\sport link-type\s${Type}
+  ^\s${Dot1x}
+  ^# -> Record
