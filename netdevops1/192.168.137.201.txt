@@ -1,0 +1,127 @@
+Building configuration...
+
+Current configuration : 1521 bytes
+!
+! Last configuration change at 12:05:37 CST Sat Jun 11 2022
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service compress-config
+!
+hostname netdevops01
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 5 $1$9Nw7$//6fTN3yJ/cJYgGDkO3Rx1
+enable password admin123!
+!
+username netdevops password 0 admin123!
+aaa new-model
+!
+!
+!
+!
+!
+!
+!
+!
+aaa session-id common
+clock timezone CST 8 0
+!
+!
+!
+!
+!
+!
+!
+!
+ip domain-name netdevops.com
+ip cef
+no ipv6 cef
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback100
+ no ip address
+!
+interface Loopback101
+ no ip address
+!
+interface Loopback102
+ no ip address
+!
+interface Loopback103
+ no ip address
+!
+interface Loopback104
+ no ip address
+!
+interface Loopback105
+ no ip address
+!
+interface Loopback106
+ no ip address
+!
+interface Ethernet0/0
+ description config by the nornir jinja2
+ switchport access vlan 20
+ switchport mode access
+!
+interface Ethernet0/1
+!
+interface Ethernet0/2
+ description configed by netmiko
+!
+interface Ethernet0/3
+!
+interface Vlan20
+ ip address 192.168.137.201 255.255.255.0
+!
+ip forward-protocol nd
+!
+ip http server
+!
+ip ssh time-out 60
+ip ssh authentication-retries 5
+ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+!
+!
+!
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ logging synchronous
+line aux 0
+line vty 0 4
+ transport input ssh
+!
+!
+!
+end
