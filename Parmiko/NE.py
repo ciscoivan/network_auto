@@ -6,7 +6,7 @@ for a in devices.keys():
 
 source="7782,helen,IT,SALES,5000$7783,amanda,IT,SALES,6000$7784,ivan,IT,SALES,7000"
 list1=source.split("$")
-print(list1)
+
 all_list={}
 for i in range(0,len(list1)):
     e=list1[i].split(',')
@@ -17,3 +17,4 @@ print(all_list)
 empon=input("xxx")
 emp=all_list.get(empon)
 print(emp)
+

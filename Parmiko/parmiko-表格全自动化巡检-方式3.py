@@ -69,7 +69,7 @@ def ssh_session(a, command_list):
 
 
     print("****************************************************************")
-    print("成功执行{}台设备巡检文件保存在{}目录下!".format(cont, glob.os.getcwd()))
+    print("成功执行{}台设备巡检文件保存在{}目录下!".format( cont, glob.os.getcwd()))
 
 
 

@@ -10,7 +10,7 @@ from openpyxl import load_workbook
 
 def exec():
 
-    wb = load_workbook('simple_excel.xlsx', read_only=True)
+    wb = load_workbook(filename='simple_excel.xlsx', read_only=True)
     ws1 = wb[wb.sheetnames[0]]
     a = []
     command_list = []

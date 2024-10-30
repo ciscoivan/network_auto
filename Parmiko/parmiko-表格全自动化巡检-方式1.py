@@ -5,7 +5,7 @@ import  glob
 
 from openpyxl import load_workbook
 
-date2 = time.strftime("%Y-%m-%d",time.localtime())
+date2 = time.strftime(f"%Y-%m-%d",time.localtime())
 
 
 wb = load_workbook('simple_excel.xlsx', read_only=True)
