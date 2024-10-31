@@ -38,3 +38,13 @@ Log in and type the following command (replace NVIDIA-Linux-x86_64-410.78.run wi
 
 Run the following nvidia-smi command to see what apps are using the NVIDIA GPU on CentOS 7 box:
 #nvidia-smi
+
+CUDA INISTALL
+https://developer.nvidia.com/cuda-12-0-0-download-archive?target_os=Linux&target_arch=x86_64&Distribution=CentOS&target_version=7&target_type=runfile_local
+Download Installer for Linux CentOS 7 x86_64
+The base installer is available for download below.
+
+Base Installer	
+Installation Instructions:
+wget https://developer.download.nvidia.com/compute/cuda/12.0.0/local_installers/cuda_12.0.0_525.60.13_linux.run
+sudo sh cuda_12.0.0_525.60.13_linux.run
