@@ -29,5 +29,12 @@ To install the Nvidia driver switch to console mode. The Nvidia installer refuse
 Hence, it is necessary to switch to text mode. Open a terminal Window and run:
 #sudo systemctl isolate multi-user.target
 
+Go to the NVIDIA official website to download the driver for your graphics card.
+https://www.nvidia.cn/drivers/lookup/
 
+Installing Nvidia driver on CentOS 7
+Log in and type the following command (replace NVIDIA-Linux-x86_64-410.78.run with actual downloaded file name):
+#sudo bash NVIDIA-Linux-x86_64-410.78.run
 
+Run the following nvidia-smi command to see what apps are using the NVIDIA GPU on CentOS 7 box:
+#nvidia-smi
