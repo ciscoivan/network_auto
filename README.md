@@ -1,27 +1,26 @@
-#network_auto
+# Netauto&&Ai.
 
-1.本代码适用于netdevops工程师的工作和学习,以及AI的相关学习!
+1. This code is suitable for the work and study of netdevops engineers, as well as AI-related study!
 
-2.网络项目Network_Automatic_Inspect代码来自于https://github.com/singvis/Network_Automatic_Inspect--点滴技术
+2. The network project Network_Automatic_Inspect code comes from https://github.com/singvis/Network_Automatic_Inspect--Drip Technology
 
-3.环境准备
-安装好python环境，推荐版本python ≥3.9
+3. Prepare the environment and install the python environment. The recommended version of python is ≥3.9
 
-安装必要的第三方模块
+   Install necessary third-party modules
+   
+   Follow the following command to install: pip install -r request.txt
 
-按照如下命令进行安装：pip install -r requirement.txt
+# The file mainly includes the following necessary modules.
+     netmiko==3.4.0
 
-# 文件主要包括如下必要模块.
-netmiko==3.4.0
+     prettytable==3.3.0
 
-prettytable==3.3.0
+     openpyxl==3.0.9
 
-openpyxl==3.0.9
-
-parmiko
+     parmiko==3.4.0
 
 
-BY ivan  李阳
+     BY ivan  李阳
 
 
 ![image](https://github.com/user-attachments/assets/73870ba8-4125-4532-b8c3-07ef4d7a218d)
