@@ -1,1 +1,33 @@
+How to update CentOS 7 desktop
+It is essential that you use the latest Linux kernel and other drivers. Open the terminal application and run:
+#sudo yum update
+How to install kernel-devel and other software
+One must install kernel-devel and gcc kernel on a CentOS 7:
+#sudo yum group install "Development Tools"
+#sudo yum install kernel-devel
+
+
+Turn on and install EPEL Repo on a CentOS 7.x
+You must install dkms for registering the NVIDA kernel module with DKMS:
+#sudo yum -y install epel-release
+#sudo yum -y install dkms
+
+How to disable nouveau driver
+If the nouveau kernel driver used by the CentOS 7, installer would not work as this driver is incompatible with the NVIDIA driver and it must be disabled. 
+1. Create a blacklist file to disable Nouveau driver.
+#echo 'blacklist nouveau' | sudo tee /etc/modprobe.d/blacklist-nouveau.conf
+#echo 'options nouveau modeset=0' | sudo tee -a /etc/modprobe.d/blacklist-nouveau.conf
+2. Update the initialization kernel module list.
+#dracut --force
+3. Restart the system.
+#reboot
+4. Verify that Nouveau is disabled by running the following command:
+#lsmod | grep nouveau
+
+How to switch to CentOS 7 to text mode from GUI
+To install the Nvidia driver switch to console mode. The Nvidia installer refuse to work if you are running from GUI:
+Hence, it is necessary to switch to text mode. Open a terminal Window and run:
+#sudo systemctl isolate multi-user.target
+
+
 
