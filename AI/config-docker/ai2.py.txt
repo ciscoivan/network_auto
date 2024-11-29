@@ -1,0 +1,29 @@
+import time
+from openai import OpenAI
+client = OpenAI(
+    base_url="http://localhost:8000/v1",
+    api_key="12345",
+)
+
+print("Connected to server successfully.\n")
+
+while True:
+    user_input = input("User: ")
+
+    completion = client.chat.completions.create(
+        model="/usr/local/corex-4.1.2/Meta-Llama-3___1-8B-Instruct",
+        messages=[
+            {"role": "system", "content": "You are a helpful assistant."},
+            {"role": "user", "content": user_input}
+        ],
+        max_tokens=2048,
+    )
+
+    if completion.choices:
+        print("\nAssistant:", completion.choices[0].message.content)
+
+    else:
+        print("No response received.")
+    print("\n=================================================================\n")
+    # 暂停一秒以便用户可以看到响应并准备下一个问题
+    time.sleep(1)
