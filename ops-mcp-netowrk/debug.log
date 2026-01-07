@@ -1,0 +1,9 @@
+2025-12-01 17:56:19,160 - test_debug - INFO - 开始网络设备巡检工具DEBUG测试
+2025-12-01 17:56:19,161 - test_debug - INFO - === 开始测试函数: check_device_sessions ===
+2025-12-01 17:56:19,161 - test_debug - INFO - 参数: {'hostname': '192.168.1.1', 'username': 'admin', 'password': 'password', 'timeout': 10}
+2025-12-01 17:56:19,162 - network_tools.ssh_manager - DEBUG - Creating new SSH connection to admin@192.168.1.1:22
+2025-12-01 17:56:29,169 - network_tools.ssh_manager - ERROR - Unexpected error connecting to admin@192.168.1.1:22: timed out
+2025-12-01 17:56:29,169 - network_tools.session_tools - ERROR - 分析设备会话连接失败: timed out
+2025-12-01 17:56:29,170 - test_debug - INFO - 测试结果: {'status': 'error', 'data': {}, 'raw_outputs': {}, 'error': '分析设备会话连接失败: timed out', 'summary': None}
+2025-12-01 17:56:29,170 - test_debug - INFO - === 函数 check_device_sessions 测试完成 ===
+2025-12-01 17:56:29,170 - test_debug - INFO - 网络设备巡检工具DEBUG测试完成
